@@ -5,6 +5,11 @@
 - Email: MailerLite in use. Substack is the primary list.
 - Keep existing URLs: /novels/, /portfolio/, /poetry-prose/ (redirect if slugs change).
 
+## Visual direction
+- Palette: Concrete (cool gray #E6E7E3, charcoal #1A1C1E, pine #0E6B5C). Third card color TBD (no clay red).
+- Fonts: Geist (headings, body) + Geist Mono (labels).
+- Layout: compact header, three freestanding cards with colored heading bands.
+
 ## Homepage
 - Header: logo, "Tucker May", subheader "Professional Writing Services" (under review), photo.
 - Three columns, priority order: Books > Writing Lessons Everywhere > Scriptwriting services.

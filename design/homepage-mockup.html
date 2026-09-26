@@ -17,7 +17,7 @@
   .controls h1 { font-size: 15px; margin: 0; font-weight: 650; }
   .controls p { margin: 0; color: var(--ui-muted); font-size: 13px; }
   .ctl-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
-  .ctl-label { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--ui-muted); width: 72px; flex-shrink: 0; }
+  .ctl-label { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--ui-muted); width: 88px; flex-shrink: 0; }
   .ctl-row button { font: inherit; font-size: 13px; background: transparent; color: var(--ui-ink); border: 1px solid var(--ui-line); border-radius: 999px; padding: 5px 12px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
   .ctl-row button[aria-pressed="true"] { background: var(--ui-on); color: var(--ui-on-ink); border-color: var(--ui-on); }
   .ctl-row button:focus-visible { outline: 2px solid #3b82f6; outline-offset: 2px; }
@@ -46,6 +46,10 @@
   .site[data-palette="concrete"] { --sand:#E6E7E3; --surface:#F7F7F5; --line:#D0D2CC; --field:#EEEFEC; --ink:#1A1C1E; --muted:#5A5E62; --accent:#0E6B5C; --on-accent:#FFFFFF; --deep:#1A1C1E; --on-deep:#F7F7F5; --tone1:#1A1C1E; --on1:#FFFFFF; --tone2:#0E6B5C; --on2:#FFFFFF; --tone3:#B0492F; --on3:#FFFFFF; --shadow:rgba(26,28,30,.12); }
   .site[data-palette="warm"]     { --sand:#EEEAE2; --surface:#FBFAF7; --line:#DDD6CA; --field:#F3F0EA; --ink:#16181B; --muted:#5E5A54; --accent:#B9451A; --on-accent:#FFFFFF; --deep:#16181B; --on-deep:#FBFAF7; --tone1:#16181B; --on1:#FFFFFF; --tone2:#0F766E; --on2:#FFFFFF; --tone3:#B9451A; --on3:#FFFFFF; --shadow:rgba(40,30,15,.12); }
   .site[data-palette="noir"] { color-scheme: dark; }
+  .site[data-tone3="slate"]    { --tone3:#34506E; }
+  .site[data-tone3="ochre"]    { --tone3:#8A6412; }
+  .site[data-tone3="plum"]     { --tone3:#5E3B5C; }
+  .site[data-tone3="graphite"] { --tone3:#4B5157; }
   /* Type pairings */
   .site[data-type="geist"]      { --display:"Geist", system-ui, sans-serif; --body:"Geist", system-ui, sans-serif; --label:"Geist Mono", ui-monospace, monospace; --display-weight:700; --display-stretch:100%; --display-track:-.035em; --label-case:uppercase; --label-track:.06em; }
   .site[data-type="instrument"] { --display:"Instrument Serif", Georgia, serif; --body:"Instrument Sans", system-ui, sans-serif; --label:"Instrument Sans", system-ui, sans-serif; --display-weight:400; --display-stretch:100%; --display-track:-.01em; --label-case:uppercase; --label-track:.1em; }
@@ -158,21 +162,14 @@
 <section class="controls" aria-label="Mockup controls">
   <div>
     <h1>Homepage mockup: tuckermay.com</h1>
-    <p>Switch the palette, fonts, column widths, and screen size. The photo, logo, book covers, and Substack posts are placeholders.</p>
+    <p>Concrete palette with Geist fonts. Pick a color for the third card, then check column widths and the phone view. The photo, logo, book covers, and Substack posts are placeholders.</p>
   </div>
-  <div class="ctl-row" data-ctl="palette" role="group" aria-label="Palette">
-    <span class="ctl-label">Palette</span>
-    <button id="p-studio" data-val="studio" aria-pressed="true"><span class="sw"><i style="background:#F4F4F1"></i><i style="background:#111317"></i><i style="background:#2340E8"></i><i style="background:#D63B1F"></i></span>Studio</button>
-    <button id="p-noir" data-val="noir" aria-pressed="false"><span class="sw"><i style="background:#0F1012"></i><i style="background:#E8E4DA"></i><i style="background:#3452F0"></i><i style="background:#E0A526"></i></span>Noir (dark)</button>
-    <button id="p-concrete" data-val="concrete" aria-pressed="false"><span class="sw"><i style="background:#E6E7E3"></i><i style="background:#1A1C1E"></i><i style="background:#0E6B5C"></i><i style="background:#B0492F"></i></span>Concrete</button>
-    <button id="p-warm" data-val="warm" aria-pressed="false"><span class="sw"><i style="background:#EEEAE2"></i><i style="background:#16181B"></i><i style="background:#0F766E"></i><i style="background:#B9451A"></i></span>Warm neutral</button>
-  </div>
-  <div class="ctl-row" data-ctl="type" role="group" aria-label="Fonts">
-    <span class="ctl-label">Fonts</span>
-    <button id="t-geist" data-val="geist" aria-pressed="true">Geist + Geist Mono</button>
-    <button id="t-instrument" data-val="instrument" aria-pressed="false">Instrument Serif + Sans</button>
-    <button id="t-archivo" data-val="archivo" aria-pressed="false">Archivo Wide</button>
-    <button id="t-schibsted" data-val="schibsted" aria-pressed="false">Schibsted Grotesk</button>
+  <div class="ctl-row" data-ctl="tone3" role="group" aria-label="Third card color">
+    <span class="ctl-label">3rd color</span>
+    <button id="c-slate" data-val="slate" aria-pressed="true"><span class="sw"><i style="background:#34506E"></i></span>Slate blue</button>
+    <button id="c-ochre" data-val="ochre" aria-pressed="false"><span class="sw"><i style="background:#8A6412"></i></span>Ochre</button>
+    <button id="c-plum" data-val="plum" aria-pressed="false"><span class="sw"><i style="background:#5E3B5C"></i></span>Plum</button>
+    <button id="c-graphite" data-val="graphite" aria-pressed="false"><span class="sw"><i style="background:#4B5157"></i></span>Graphite</button>
   </div>
   <div class="ctl-row" data-ctl="layout" role="group" aria-label="Columns">
     <span class="ctl-label">Columns</span>
@@ -187,7 +184,7 @@
 </section>
 
 <div class="stage" id="stage">
-  <div class="site" id="site" data-palette="studio" data-type="geist" data-layout="equal">
+  <div class="site" id="site" data-palette="concrete" data-type="geist" data-tone3="slate" data-layout="equal">
     <header class="wrap masthead">
       <span class="logo">YOUR<br>LOGO</span>
       <a class="id" href="#">
