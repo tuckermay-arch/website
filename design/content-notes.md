@@ -37,7 +37,7 @@
 
 ## Inner pages (mockups: design/pages-mockup.html)
 - Novels: two descriptions per book (short for homepage hover, long for this page); 3 review quotes per book (editable spots; Tucker adds them in WordPress); Last Dead Guy teaser: "When a creative loner’s best friend goes missing, the quest to find him uncovers a conspiracy that threatens all of existence as we know it."; audiobook uses the same Amazon link; Coming Soon at the bottom; WLE cross-sell.
-- WLE: paid $12/month or $50/year. Paid and free both use the Substack subscribe link. Community = Substack chat; book club coming soon. Sample post: Toy Story 4 (https://tuckermaymysteries.substack.com/p/toy-story-4-writing-lesson; draft in Drive "toy_story_4_catharsis_engine.md").
+- WLE: paid $12/month or $50/year. Paid and free both use the Substack subscribe link. Community = Substack chat; book club coming soon. Sample post: Toy Story 4 (https://tuckermaymysteries.substack.com/p/toy-story-4-writing-lesson; published text pasted in chat: Sell the Want / Hide the Need in Plain Sight / Honor the Want Before Subverting; tool = want/need worksheet in the Toolkit).
 - Comedy One-Sheets: example PDFs from Drive (Author Business > Online Content > Podcast One-Sheets): The White Lotus, Severance, Project Hail Mary, The Devil Wears Prada 2, Weapons (design/assets/src/one-sheets/). Keep the existing FAQ. "Studies prove" line rewritten without the claim.
 - Still to answer: YouTube Scripts (offer, process, samples, pricing), About bio/photo, Other Writing content (Screenplays, TV Shows, Poetry / Short Stories), Blog format.
 
