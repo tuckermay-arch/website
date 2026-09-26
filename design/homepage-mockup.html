@@ -135,9 +135,13 @@
   .head-covers a:hover { transform: translateY(-3px) rotate(-1deg); }
   .head-covers .cover-img { box-shadow: 0 2px 4px rgba(0,0,0,.25), 0 14px 28px -10px rgba(0,0,0,.55); }
   .book { justify-content: flex-start; }
-  .formats { font-size: 12px; color: var(--muted); font-family: var(--label); }
-  .book .btn { padding: 10px 12px; font-size: 13px; }
-  .upcoming { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 20px; align-items: start; margin-top: 4px; padding: 18px; border-radius: 14px; background: var(--field); border: 1px solid var(--line); }
+  .formats { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 2px 0; font-size: 13px; color: var(--muted); line-height: 1.4; }
+  .formats li { white-space: nowrap; }
+  .formats li:not(:last-child)::after { content: "·"; margin: 0 6px; }
+  .book .btn { padding: 11px 10px; font-size: 13px; white-space: nowrap; }
+  .upcoming { flex: 1; display: grid; grid-template-columns: minmax(0, 1fr); justify-items: center; text-align: center; gap: 18px; align-content: center; margin-top: 4px; padding: 18px; border-radius: 14px; background: var(--field); border: 1px solid var(--line); }
+  .upcoming > .cover-img { width: min(58%, 230px); }
+  .upcoming > div { width: 100%; max-width: 320px; }
   .upcoming .cover-img { box-shadow: 0 2px 4px rgba(0,0,0,.2), 0 16px 30px -12px rgba(0,0,0,.5); }
   .upcoming h3 { font-family: var(--display); font-weight: var(--display-weight); font-size: clamp(22px, 2.3cqi, 30px); line-height: 1.05; margin: 6px 0 10px; text-wrap: balance; }
   .upcoming .note { font-size: 14px; }
@@ -242,11 +246,11 @@
         <div class="pillar-body">
           <div class="shelf">
             <div class="book">
-              <span class="formats">Hardcover · Paperback · Kindle · Audio</span>
+              <ul class="formats"><li>Hardcover</li><li>Paperback</li><li>Kindle</li><li>Audiobook</li></ul>
               <a class="btn solid" href="https://a.co/d/0a47KAUl" target="_blank" rel="noopener">Buy on Amazon</a>
             </div>
             <div class="book">
-              <span class="formats">Hardcover · Paperback · Kindle</span>
+              <ul class="formats"><li>Hardcover</li><li>Paperback</li><li>Kindle</li></ul>
               <a class="btn solid" href="https://a.co/d/05ZV8bDo" target="_blank" rel="noopener">Buy on Amazon</a>
             </div>
           </div>
