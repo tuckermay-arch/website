@@ -15,7 +15,7 @@
 
 ## Homepage
 - Header: logo mark, square photo, "Tucker May", subheader "Novels · Comedy Writing · A Community for Writers" (Tucker is a peer/community moderator, not a teacher).
-- Three columns, priority order: Books > Writing Lessons Everywhere > Scriptwriting services.
+- Three columns, priority order: Books > Writing Lessons Everywhere > Scriptwriting services. Books card is wider (1.35fr 1fr 1fr) and has no visible title (covers act as heading).
 
 ## Books (Amazon only)
 - Death of a Billionaire: hardcover, paperback, Kindle (KDP Select), audiobook. https://a.co/d/0a47KAUl (Substack uses https://a.co/d/0j6DiCPy)
