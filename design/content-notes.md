@@ -22,7 +22,7 @@
 - The Lemon House Murders: hardcover, paperback, Kindle. https://a.co/d/05ZV8bDo (Substack uses https://a.co/d/0gaaofTb)
 - Upcoming: The Last Dead Guy in Hell. Cover exists, no date. Email signup goes to MailerLite, then a second step offers a Writing Lessons Everywhere subscription (Substack confirms by email). Chosen over checkbox + manual import.
 - One Novels page for all three books (details after homepage is final).
-- Review blurbs on the Novels page only, user-editable.
+- Review blurbs on the Novels page, user-editable. Exception: one Readers' Favorite five-star quote (Lemon House) on the homepage Books card, between the buy buttons and Coming Soon. Quote text needed.
 
 ## Writing Lessons Everywhere (Substack: tuckermaymysteries.substack.com)
 - Weekly. Format: Source → Mechanism → Tool.
