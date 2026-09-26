@@ -20,9 +20,9 @@
 ## Books (Amazon only)
 - Death of a Billionaire: hardcover, paperback, Kindle (KDP Select), audiobook. https://a.co/d/0a47KAUl (Substack uses https://a.co/d/0j6DiCPy)
 - The Lemon House Murders: hardcover, paperback, Kindle. https://a.co/d/05ZV8bDo (Substack uses https://a.co/d/0gaaofTb)
-- Upcoming: The Last Dead Guy in Hell. Cover exists, no date. Email signup goes to MailerLite, then a second step offers a Writing Lessons Everywhere subscription (Substack confirms by email). Chosen over checkbox + manual import.
+- Upcoming: The Last Dead Guy in Hell. Cover exists, no date. Featured as a large "Coming soon" panel in the Books card. Email signup goes to MailerLite, then a second step offers a Writing Lessons Everywhere subscription (Substack confirms by email). Chosen over checkbox + manual import.
 - One Novels page for all three books (details after homepage is final).
-- Review blurbs on the Novels page, user-editable. Exception: one Readers' Favorite five-star quote (Lemon House) on the homepage Books card, between the buy buttons and Coming Soon. Quote text needed.
+- Review blurbs on the Novels page only, user-editable.
 
 ## Writing Lessons Everywhere (Substack: tuckermaymysteries.substack.com)
 - Weekly. Format: Source → Mechanism → Tool.
