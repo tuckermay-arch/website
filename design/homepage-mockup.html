@@ -1,7 +1,7 @@
 <title>Tucker May Homepage Mockup</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Public+Sans:wght@400;600&family=Manrope:wght@400;600;800&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Literata:opsz,wght@7..72,400;7..72,600&family=Libre+Baskerville:wght@400;700&family=Work+Sans:wght@400;600&family=Courier+Prime:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700;800&family=Geist+Mono:wght@400;600&family=Instrument+Serif&family=Instrument+Sans:wght@400;600;700&family=Archivo:wdth,wght@62..125,400..800&family=Schibsted+Grotesk:wght@400;600;800&display=swap">
 <style>
   /* ---------- Mockup controls (not part of the site) ---------- */
   :root {
@@ -31,24 +31,27 @@
 
   /* ---------- The site ---------- */
   .site {
-    --sand: #E9DCC4; --surface: #F7F1E6; --line: #CDBB9C; --ink: #1F2A36; --muted: #5B5F63; --accent: #2C4A6B; --on-accent: #F4ECDD; --deep: #1F2A36; --on-deep: #E9DCC4; --tone1:#1F2A36; --tone2:#2C4A6B; --tone3:#83572F; --on-tone:#F4ECDD;
-    --display: "Newsreader", Georgia, serif; --body: "Public Sans", system-ui, sans-serif; --label: "Public Sans", system-ui, sans-serif;
-    --display-weight: 600; --label-case: uppercase; --label-track: .12em;
+    --sand:#F4F4F1; --surface:#FFFFFF; --line:#E2E2DD; --field:#F4F4F1; --ink:#111317; --muted:#5D6068; --accent:#2340E8; --on-accent:#FFFFFF; --deep:#111317; --on-deep:#FFFFFF;
+    --tone1:#111317; --on1:#FFFFFF; --tone2:#2340E8; --on2:#FFFFFF; --tone3:#D63B1F; --on3:#FFFFFF; --shadow: rgba(17,19,23,.10);
+    --display:"Geist", system-ui, sans-serif; --body:"Geist", system-ui, sans-serif; --label:"Geist Mono", ui-monospace, monospace;
+    --display-weight:700; --display-stretch:100%; --display-track:-.035em; --label-case:uppercase; --label-track:.06em;
     container-type: inline-size;
     background: var(--sand); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6;
     border-radius: 6px; overflow: hidden; box-shadow: 0 1px 2px rgba(0,0,0,.08), 0 12px 40px rgba(0,0,0,.08);
     transition: background .25s, color .25s;
   }
   /* Palettes */
-  .site[data-palette="dune"]     { --sand:#E9DCC4; --surface:#F7F1E6; --line:#CDBB9C; --ink:#1F2A36; --muted:#5B5F63; --accent:#2C4A6B; --on-accent:#F4ECDD; --deep:#1F2A36; --on-deep:#E9DCC4; --tone1:#1F2A36; --tone2:#2C4A6B; --tone3:#83572F; --on-tone:#F4ECDD; }
-  .site[data-palette="driftwood"]{ --sand:#DDD6C8; --surface:#F3F0E9; --line:#BDB4A2; --ink:#2A2E28; --muted:#5E615A; --accent:#56694D; --on-accent:#F1EEE6; --deep:#2F352C; --on-deep:#DDD6C8; --tone1:#2F352C; --tone2:#56694D; --tone3:#74593A; --on-tone:#F1EEE6; }
-  .site[data-palette="tidepool"] { --sand:#E4D3B4; --surface:#F6EEDF; --line:#C8B28B; --ink:#1E2F33; --muted:#586264; --accent:#1F6E6A; --on-accent:#F3EAD7; --deep:#173C3A; --on-deep:#E4D3B4; --tone1:#173C3A; --tone2:#1F6E6A; --tone3:#8A5230; --on-tone:#F3EAD7; }
-  .site[data-palette="mesa"]     { --sand:#EFE6D5; --surface:#FBF7F0; --line:#D3C5AA; --ink:#2B2522; --muted:#655C55; --accent:#7A2E2E; --on-accent:#F7F1E6; --deep:#2B2522; --on-deep:#EFE6D5; --tone1:#2B2522; --tone2:#7A2E2E; --tone3:#7A5A2C; --on-tone:#F7F1E6; }
+  .site[data-palette="studio"]   { --sand:#F4F4F1; --surface:#FFFFFF; --line:#E2E2DD; --field:#F4F4F1; --ink:#111317; --muted:#5D6068; --accent:#2340E8; --on-accent:#FFFFFF; --deep:#111317; --on-deep:#FFFFFF; --tone1:#111317; --on1:#FFFFFF; --tone2:#2340E8; --on2:#FFFFFF; --tone3:#D63B1F; --on3:#FFFFFF; --shadow:rgba(17,19,23,.10); }
+  .site[data-palette="noir"]     { --sand:#0F1012; --surface:#18191C; --line:#2B2D32; --field:#0F1012; --ink:#F2F1EE; --muted:#9A9CA3; --accent:#E0A526; --on-accent:#111317; --deep:#F2F1EE; --on-deep:#0F1012; --tone1:#E8E4DA; --on1:#111317; --tone2:#3452F0; --on2:#FFFFFF; --tone3:#E0A526; --on3:#111317; --shadow:rgba(0,0,0,.5); --foot:#08090A; --on-foot:#F2F1EE; }
+  .site[data-palette="concrete"] { --sand:#E6E7E3; --surface:#F7F7F5; --line:#D0D2CC; --field:#EEEFEC; --ink:#1A1C1E; --muted:#5A5E62; --accent:#0E6B5C; --on-accent:#FFFFFF; --deep:#1A1C1E; --on-deep:#F7F7F5; --tone1:#1A1C1E; --on1:#FFFFFF; --tone2:#0E6B5C; --on2:#FFFFFF; --tone3:#B0492F; --on3:#FFFFFF; --shadow:rgba(26,28,30,.12); }
+  .site[data-palette="warm"]     { --sand:#EEEAE2; --surface:#FBFAF7; --line:#DDD6CA; --field:#F3F0EA; --ink:#16181B; --muted:#5E5A54; --accent:#B9451A; --on-accent:#FFFFFF; --deep:#16181B; --on-deep:#FBFAF7; --tone1:#16181B; --on1:#FFFFFF; --tone2:#0F766E; --on2:#FFFFFF; --tone3:#B9451A; --on3:#FFFFFF; --shadow:rgba(40,30,15,.12); }
+  .site[data-palette="noir"] { color-scheme: dark; }
   /* Type pairings */
-  .site[data-type="literary"] { --display:"Newsreader", Georgia, serif; --body:"Public Sans", system-ui, sans-serif; --label:"Public Sans", system-ui, sans-serif; --display-weight:600; --label-case:uppercase; --label-track:.12em; }
-  .site[data-type="modern"]   { --display:"Manrope", system-ui, sans-serif; --body:"Manrope", system-ui, sans-serif; --label:"Manrope", system-ui, sans-serif; --display-weight:800; --label-case:uppercase; --label-track:.14em; }
-  .site[data-type="bookish"]  { --display:"Bricolage Grotesque", system-ui, sans-serif; --body:"Literata", Georgia, serif; --label:"Bricolage Grotesque", system-ui, sans-serif; --display-weight:800; --label-case:uppercase; --label-track:.1em; }
-  .site[data-type="casefile"] { --display:"Libre Baskerville", Georgia, serif; --body:"Work Sans", system-ui, sans-serif; --label:"Courier Prime", "Courier New", monospace; --display-weight:700; --label-case:none; --label-track:0; }
+  .site[data-type="geist"]      { --display:"Geist", system-ui, sans-serif; --body:"Geist", system-ui, sans-serif; --label:"Geist Mono", ui-monospace, monospace; --display-weight:700; --display-stretch:100%; --display-track:-.035em; --label-case:uppercase; --label-track:.06em; }
+  .site[data-type="instrument"] { --display:"Instrument Serif", Georgia, serif; --body:"Instrument Sans", system-ui, sans-serif; --label:"Instrument Sans", system-ui, sans-serif; --display-weight:400; --display-stretch:100%; --display-track:-.01em; --label-case:uppercase; --label-track:.1em; }
+  .site[data-type="archivo"]    { --display:"Archivo", system-ui, sans-serif; --body:"Archivo", system-ui, sans-serif; --label:"Archivo", system-ui, sans-serif; --display-weight:800; --display-stretch:118%; --display-track:-.02em; --label-case:uppercase; --label-track:.1em; }
+  .site[data-type="schibsted"]  { --display:"Schibsted Grotesk", system-ui, sans-serif; --body:"Schibsted Grotesk", system-ui, sans-serif; --label:"Schibsted Grotesk", system-ui, sans-serif; --display-weight:800; --display-stretch:100%; --display-track:-.03em; --label-case:uppercase; --label-track:.1em; }
+  .site h2, .site h3, .id-name, .cover b { font-stretch: var(--display-stretch); letter-spacing: var(--display-track); }
 
   .site a { color: inherit; }
   .wrap { padding-inline: clamp(20px, 4cqi, 56px); }
@@ -57,8 +60,8 @@
   .masthead { display: flex; align-items: center; gap: clamp(12px, 2cqi, 24px); padding-block: 14px; border-bottom: 1px solid var(--line); }
   .logo { display: inline-grid; place-items: center; width: 40px; height: 40px; flex-shrink: 0; border: 1.5px dashed var(--muted); border-radius: 6px; font: 600 9px/1 var(--label); color: var(--muted); text-align: center; }
   .id { display: flex; align-items: center; gap: 12px; min-width: 0; text-decoration: none; }
-  .photo { width: 56px; height: 56px; flex-shrink: 0; border-radius: 4px; background: repeating-linear-gradient(135deg, var(--surface) 0 6px, var(--sand) 6px 12px); border: 1px solid var(--line); display: grid; place-items: center; text-align: center; font: 10px/1.1 var(--label); color: var(--muted); }
-  .id-name { font-family: var(--display); font-weight: var(--display-weight); font-size: clamp(22px, 2.4cqi, 30px); line-height: 1; letter-spacing: -.01em; margin: 0; }
+  .photo { width: 56px; height: 56px; flex-shrink: 0; border-radius: 10px; background: repeating-linear-gradient(135deg, var(--surface) 0 6px, var(--field) 6px 12px); border: 1px solid var(--line); display: grid; place-items: center; text-align: center; font: 10px/1.1 var(--label); color: var(--muted); }
+  .id-name { font-family: var(--display); font-weight: var(--display-weight); font-size: clamp(22px, 2.4cqi, 30px); line-height: 1; margin: 0; }
   .id-sub { font-family: var(--label); text-transform: var(--label-case); letter-spacing: var(--label-track); font-size: 11px; font-weight: 600; color: var(--accent); margin: 5px 0 0; white-space: nowrap; }
   .menu { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 20px; list-style: none; margin: 0 0 0 auto; padding: 0; font-size: 14px; }
   .menu a { text-decoration: none; }
@@ -68,13 +71,13 @@
   /* Three columns: freestanding mini-pages */
   .pillars { display: grid; grid-template-columns: var(--cols, 1fr 1fr 1fr); gap: 0 clamp(16px, 2cqi, 28px); grid-auto-rows: auto; padding-block: clamp(20px, 2.6cqi, 36px) clamp(28px, 4cqi, 56px); }
   .site[data-layout="weighted"] .pillars { --cols: 1.35fr 1fr 1fr; }
-  .pillar { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; display: grid; grid-row: span 3; grid-template-rows: subgrid; row-gap: 0; min-width: 0; box-shadow: 0 1px 0 rgba(0,0,0,.04), 0 14px 30px -12px rgba(40,30,15,.28); transition: transform .2s ease, box-shadow .2s ease; }
-  .pillar:hover { transform: translateY(-3px); box-shadow: 0 1px 0 rgba(0,0,0,.04), 0 20px 36px -12px rgba(40,30,15,.34); }
-  .pillar-head { --tone: var(--tone1); background: var(--tone); color: var(--on-tone); padding: clamp(20px, 2.4cqi, 30px) clamp(20px, 2.4cqi, 30px) clamp(18px, 2cqi, 24px); display: grid; gap: 8px; }
-  .pillar.p2 .pillar-head { --tone: var(--tone2); }
-  .pillar.p3 .pillar-head { --tone: var(--tone3); }
+  .pillar { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; display: grid; grid-row: span 3; grid-template-rows: subgrid; row-gap: 0; min-width: 0; box-shadow: 0 1px 2px var(--shadow), 0 18px 40px -18px var(--shadow); transition: transform .2s ease, box-shadow .2s ease; }
+  .pillar:hover { transform: translateY(-3px); box-shadow: 0 1px 2px var(--shadow), 0 26px 50px -18px var(--shadow); }
+  .pillar-head { background: var(--tone1); color: var(--on1); padding: clamp(20px, 2.4cqi, 30px) clamp(20px, 2.4cqi, 30px) clamp(18px, 2cqi, 24px); display: grid; gap: 8px; }
+  .pillar.p2 .pillar-head { background: var(--tone2); color: var(--on2); }
+  .pillar.p3 .pillar-head { background: var(--tone3); color: var(--on3); }
   .pillar-head .kicker { font-family: var(--label); text-transform: var(--label-case); letter-spacing: var(--label-track); font-size: 12px; font-weight: 600; opacity: .8; margin: 0; }
-  .pillar-head h2 { font-family: var(--display); font-weight: var(--display-weight); font-size: clamp(32px, 3.5cqi, 46px); line-height: 1; letter-spacing: -.015em; margin: 0; text-wrap: balance; }
+  .pillar-head h2 { font-family: var(--display); font-weight: var(--display-weight); font-size: clamp(32px, 3.6cqi, 48px); line-height: .98; margin: 0; text-wrap: balance; }
   .pillar-head .tag { font-size: 15px; line-height: 1.4; margin: 2px 0 0; opacity: .92; }
   .pillar-body { display: flex; flex-direction: column; gap: 18px; padding: clamp(20px, 2.4cqi, 30px); }
   .pillar p { margin: 0; }
@@ -83,7 +86,7 @@
   .pillar-foot:hover::after { transform: translateX(4px); }
   .eyebrow { font-family: var(--label); text-transform: var(--label-case); letter-spacing: var(--label-track); font-size: 12px; font-weight: 600; color: var(--muted); margin: 0; }
 
-  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font: 600 14px/1 var(--body); padding: 12px 18px; border-radius: 4px; text-decoration: none; border: 1.5px solid var(--accent); cursor: pointer; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font: 600 14px/1 var(--body); padding: 12px 20px; border-radius: 999px; text-decoration: none; border: 1.5px solid var(--accent); cursor: pointer; }
   .btn.solid { background: var(--accent); color: var(--on-accent) !important; }
   .btn.ghost { background: transparent; color: var(--accent) !important; }
   .btn:focus-visible, .site input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
@@ -105,19 +108,19 @@
   .upcoming .cover small { font-size: 7px; }
   .upcoming h3 { font-family: var(--display); font-weight: var(--display-weight); font-size: 19px; line-height: 1.15; margin: 4px 0 6px; }
   .signup { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
-  .signup input { flex: 1 1 140px; min-width: 0; font: 14px var(--body); padding: 11px 12px; border: 1.5px solid var(--line); border-radius: 4px; background: var(--sand); color: var(--ink); }
+  .signup input { flex: 1 1 140px; min-width: 0; font: 14px var(--body); padding: 11px 12px; border: 1.5px solid var(--line); border-radius: 999px; background: var(--field); color: var(--ink); padding-inline: 16px; }
   .note { font-size: 12px; color: var(--muted); }
 
   /* Substack */
-  .pitch { font-family: var(--display); font-size: 19px; line-height: 1.4; }
+  .pitch { font-size: 18px; line-height: 1.45; font-weight: 500; }
   .facts { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0; padding: 0; }
-  .facts li { font: 12px/1 var(--label); border: 1px solid var(--line); border-radius: 999px; padding: 6px 10px; }
+  .facts li { font: 12px/1 var(--label); background: var(--field); border: 1px solid var(--line); border-radius: 999px; padding: 6px 10px; }
   .posts { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
   .posts li { border-bottom: 1px solid var(--line); padding: 10px 0; display: grid; gap: 2px; }
   .posts a { text-decoration: none; font-weight: 600; font-size: 15px; line-height: 1.35; }
   .posts time { font: 12px var(--label); color: var(--muted); }
   .example { font: 11px var(--label); color: var(--muted); }
-  .method { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); border-radius: 6px; }
+  .method { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--field); }
   .method li { padding: 10px; display: grid; gap: 2px; min-width: 0; }
   .method li + li { border-left: 1px solid var(--line); }
   .method b { font: 600 11px var(--label); text-transform: var(--label-case); letter-spacing: .04em; color: var(--accent); }
@@ -125,9 +128,10 @@
   .creds { font-size: 15px; border-left: 2px solid var(--accent); padding-left: 12px; }
 
   /* Services */
-  .offer { border: 1px solid var(--line); border-radius: 6px; padding: 16px; display: grid; gap: 8px; background: var(--sand); }
+  .offer { border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: grid; gap: 8px; background: var(--field); }
   .offer.feature { background: var(--deep); color: var(--on-deep); border-color: var(--deep); }
   .offer.feature .btn.solid { background: var(--on-deep); color: var(--deep) !important; border-color: var(--on-deep); }
+  .offer.feature .price, .offer.feature h3 { color: var(--on-deep); }
   .offer-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
   .offer h3 { font-family: var(--display); font-weight: var(--display-weight); font-size: 19px; margin: 0; line-height: 1.2; }
   .price { font: 700 18px var(--label); white-space: nowrap; font-variant-numeric: tabular-nums; }
@@ -136,7 +140,7 @@
   .confidential::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
 
   /* Footer */
-  .foot { background: var(--deep); color: var(--on-deep); padding-block: 28px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 14px; }
+  .foot { background: var(--foot, var(--deep)); color: var(--on-foot, var(--on-deep)); border-top: 1px solid var(--line); padding-block: 28px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 14px; }
   .foot nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
   .foot a { text-decoration: none; opacity: .9; }
 
@@ -158,17 +162,17 @@
   </div>
   <div class="ctl-row" data-ctl="palette" role="group" aria-label="Palette">
     <span class="ctl-label">Palette</span>
-    <button id="p-dune" data-val="dune" aria-pressed="true"><span class="sw"><i style="background:#E9DCC4"></i><i style="background:#1F2A36"></i><i style="background:#2C4A6B"></i></span>Dune &amp; Ink</button>
-    <button id="p-driftwood" data-val="driftwood" aria-pressed="false"><span class="sw"><i style="background:#DDD6C8"></i><i style="background:#2F352C"></i><i style="background:#56694D"></i></span>Driftwood &amp; Sage</button>
-    <button id="p-tidepool" data-val="tidepool" aria-pressed="false"><span class="sw"><i style="background:#E4D3B4"></i><i style="background:#173C3A"></i><i style="background:#1F6E6A"></i></span>Tidepool</button>
-    <button id="p-mesa" data-val="mesa" aria-pressed="false"><span class="sw"><i style="background:#EFE6D5"></i><i style="background:#2B2522"></i><i style="background:#7A2E2E"></i></span>Mesa &amp; Oxblood</button>
+    <button id="p-studio" data-val="studio" aria-pressed="true"><span class="sw"><i style="background:#F4F4F1"></i><i style="background:#111317"></i><i style="background:#2340E8"></i><i style="background:#D63B1F"></i></span>Studio</button>
+    <button id="p-noir" data-val="noir" aria-pressed="false"><span class="sw"><i style="background:#0F1012"></i><i style="background:#E8E4DA"></i><i style="background:#3452F0"></i><i style="background:#E0A526"></i></span>Noir (dark)</button>
+    <button id="p-concrete" data-val="concrete" aria-pressed="false"><span class="sw"><i style="background:#E6E7E3"></i><i style="background:#1A1C1E"></i><i style="background:#0E6B5C"></i><i style="background:#B0492F"></i></span>Concrete</button>
+    <button id="p-warm" data-val="warm" aria-pressed="false"><span class="sw"><i style="background:#EEEAE2"></i><i style="background:#16181B"></i><i style="background:#0F766E"></i><i style="background:#B9451A"></i></span>Warm neutral</button>
   </div>
   <div class="ctl-row" data-ctl="type" role="group" aria-label="Fonts">
     <span class="ctl-label">Fonts</span>
-    <button id="t-literary" data-val="literary" aria-pressed="true">Literary (Newsreader + Public Sans)</button>
-    <button id="t-modern" data-val="modern" aria-pressed="false">Modern (Manrope)</button>
-    <button id="t-bookish" data-val="bookish" aria-pressed="false">Bold + bookish (Bricolage + Literata)</button>
-    <button id="t-casefile" data-val="casefile" aria-pressed="false">Case file (Baskerville + Courier)</button>
+    <button id="t-geist" data-val="geist" aria-pressed="true">Geist + Geist Mono</button>
+    <button id="t-instrument" data-val="instrument" aria-pressed="false">Instrument Serif + Sans</button>
+    <button id="t-archivo" data-val="archivo" aria-pressed="false">Archivo Wide</button>
+    <button id="t-schibsted" data-val="schibsted" aria-pressed="false">Schibsted Grotesk</button>
   </div>
   <div class="ctl-row" data-ctl="layout" role="group" aria-label="Columns">
     <span class="ctl-label">Columns</span>
@@ -183,7 +187,7 @@
 </section>
 
 <div class="stage" id="stage">
-  <div class="site" id="site" data-palette="dune" data-type="literary" data-layout="equal">
+  <div class="site" id="site" data-palette="studio" data-type="geist" data-layout="equal">
     <header class="wrap masthead">
       <span class="logo">YOUR<br>LOGO</span>
       <a class="id" href="#">
