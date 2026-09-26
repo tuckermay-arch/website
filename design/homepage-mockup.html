@@ -116,6 +116,14 @@
   .posts a { text-decoration: none; font-weight: 600; font-size: 15px; line-height: 1.35; }
   .posts time { font: 12px var(--label); color: var(--muted); }
   .example { font: 11px var(--label); color: var(--muted); }
+  .method { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); border-radius: 6px; }
+  .method li { padding: 10px; display: grid; gap: 2px; min-width: 0; }
+  .method li + li { border-left: 1px solid var(--line); }
+  .method b { font: 600 12px var(--label); text-transform: var(--label-case); letter-spacing: var(--label-track); color: var(--accent); }
+  .method b::after { content: " →"; }
+  .method li:last-child b::after { content: ""; }
+  .method span { font-size: 12px; line-height: 1.35; color: var(--muted); }
+  .creds { font-size: 15px; border-left: 2px solid var(--accent); padding-left: 12px; }
 
   /* Services */
   .offer { border: 1px solid var(--line); border-radius: 6px; padding: 16px; display: grid; gap: 8px; background: var(--sand); }
@@ -197,7 +205,7 @@
       <div>
         <h1>Tucker May</h1>
         <p class="sub">Professional Writing Services</p>
-        <p class="line">Mystery novelist, writing teacher, and scriptwriter for YouTube and podcasts. Based in Pasadena.</p>
+        <p class="line">Mystery novelist, writing teacher, and comedy writer. Pasadena, CA.</p>
       </div>
       <div class="photo">Your photo</div>
     </section>
@@ -206,7 +214,7 @@
       <!-- 1. Books -->
       <section class="pillar books">
         <p class="eyebrow">The novels</p>
-        <h2>Mysteries with a body count and a sense of humor</h2>
+        <h2>Two mysteries out now. A third on the way.</h2>
         <div class="fill">
           <div class="shelf">
             <div class="book">
@@ -242,8 +250,13 @@
         <p class="eyebrow">Newsletter on Substack</p>
         <h2>Writing Lessons Everywhere</h2>
         <div class="fill">
-          <p class="pitch">Need to refine your draft but can’t spend thousands on a book coach or narrative consultant? This is for you.</p>
-          <ul class="facts"><li>Weekly</li><li>Free</li><li>Paid exercise library</li></ul>
+          <p class="pitch">Feeling stuck with your WIP? The problem isn’t you. It’s structure, motivation, or setup and payoff, and those can be fixed.</p>
+          <ol class="method" aria-label="How each post works">
+            <li><b>Source</b><span>Pop culture in the headlines</span></li>
+            <li><b>Mechanism</b><span>What the writing does well</span></li>
+            <li><b>Tool</b><span>A worksheet for your draft</span></li>
+          </ol>
+          <ul class="facts"><li>Weekly</li><li>Free articles</li><li>Paid: Under the Hood Toolkit</li></ul>
           <form class="signup" onsubmit="event.preventDefault()">
             <label for="sub-email" hidden>Email</label>
             <input id="sub-email" type="email" placeholder="you@email.com">
@@ -264,9 +277,9 @@
       <!-- 3. Services -->
       <section class="pillar">
         <p class="eyebrow">Scriptwriting for creators</p>
-        <h2>Scripts for YouTube channels and podcasts</h2>
+        <h2>Scripts and jokes for YouTube and podcasts</h2>
         <div class="fill">
-          <p>Story structure, hooks, and pacing that keep people watching and listening to the end. Any size of channel, any format.</p>
+          <p class="creds">Alum of Northwestern’s Mee-Ow sketch show. Has written for comedy teams at The Second City, iO, and iO West.</p>
           <div class="offer">
             <div class="offer-head"><h3>Full scripts</h3><span class="price">Quote</span></div>
             <p>Written for your voice and your format, from outline to final draft.</p>
@@ -274,12 +287,12 @@
           </div>
           <div class="offer feature">
             <div class="offer-head"><h3>Comedy punch-up one-sheet</h3><span class="price">$250</span></div>
-            <p>A page of jokes and punch-ups written for your episode.</p>
+            <p>10 late-night-style jokes plus 5 intros, transitions, and ad throws, written for your episode. Delivered within 5 days.</p>
             <a class="btn solid" href="https://www.paypal.com/ncp/payment/ZWBQS9N9BLE6G" target="_blank" rel="noopener">Buy now</a>
           </div>
           <p class="confidential">All client work is confidential</p>
         </div>
-        <a class="more" href="#">See portfolio samples →</a>
+        <a class="more" href="#">See examples and FAQ →</a>
       </section>
     </main>
 
