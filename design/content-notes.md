@@ -39,7 +39,13 @@
 - Novels: two descriptions per book (short for homepage hover, long for this page); 3 review quotes per book (editable spots; Tucker adds them in WordPress); Last Dead Guy teaser: "When a creative loner’s best friend goes missing, the quest to find him uncovers a conspiracy that threatens all of existence as we know it."; audiobook uses the same Amazon link; Coming Soon at the bottom; WLE cross-sell.
 - WLE: paid $12/month or $50/year. Paid and free both use the Substack subscribe link. Community = Substack chat; book club coming soon. Sample post: Toy Story 4 (https://tuckermaymysteries.substack.com/p/toy-story-4-writing-lesson; published text pasted in chat: Sell the Want / Hide the Need in Plain Sight / Honor the Want Before Subverting; tool = want/need worksheet in the Toolkit).
 - Comedy One-Sheets: example PDFs from Drive (Author Business > Online Content > Podcast One-Sheets): The White Lotus, Severance, Project Hail Mary, The Devil Wears Prada 2, Weapons (design/assets/src/one-sheets/). Keep the existing FAQ. "Studies prove" line rewritten without the claim.
-- Still to answer: YouTube Scripts (offer, process, samples, pricing), About bio/photo, Other Writing content (Screenplays, TV Shows, Poetry / Short Stories), Blog format.
+- Comedy: "Why hire me" is a prominent slate band right after the hero.
+- YouTube Scripts: full scripts or rewrites; any genre, specializing in history, sports, comedy, entertainment; "I specialize in researching and synthesizing complex ideas into compelling videos"; process intro call > brief > outline > draft > unlimited revisions; contact for pricing; turnaround depends on length; samples (Google Docs links) grouped Explainers / Video Essays, Commentary, Video Listicles.
+- Other Writing: each is its own page. Screenplays (3): title, logline, brief summary, Request script (form). TV Shows (pilots + specs): title, logline, link to read. Poetry / Short Stories: link to read each; one links to an external publication.
+- About: bio pasted in chat (Springfield MO, Northwestern BS Theater, NSTV / Titanic Players / Mee-Ow, classes at Second City, iO, iO West, The Writer's Workshop, Janae Bakken; Last Dead Guy due 2027). New photo: design/assets/src/about-photo.jpg (390px, low-res).
+- Blog: title + subtitle + Substack cover image, latest 5, Load more.
+- Contact: form adds "What's this about?" dropdown.
+- WLE page "About Tucker" uses the post sign-off line.
 
 ## Comedy one-sheets (homepage card is one-sheets only, for movie and TV podcasts)
 - YouTube scriptwriting moves to its own page (not on the homepage). Full scripts: contact for pricing.
