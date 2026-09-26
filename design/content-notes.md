@@ -6,18 +6,21 @@
 - Keep existing URLs: /novels/, /portfolio/, /poetry-prose/ (redirect if slugs change).
 
 ## Visual direction
-- Palette: Concrete (cool gray #E6E7E3, charcoal #1A1C1E, pine #0E6B5C). Third card color TBD (no clay red).
+- Palette: Concrete (cool gray #E6E7E3, charcoal #1A1C1E, pine #0E6B5C). No clay red. Scripts card color TBD (pine proposed).
+- Writing Lessons Everywhere card uses its own brand: navy #052E49, cream #FAF8EF, blue #2D99D1, logo in the card head.
+- Brand logo: T|M circle mark + "Tucker May Books" (design/assets/tm-logo-full.png, tm-mark.png). Header uses the mark only. Need a transparent PNG or SVG original for the build.
 - Fonts: Geist (headings, body) + Geist Mono (labels).
 - Layout: compact header, three freestanding cards with colored heading bands.
 
 ## Homepage
-- Header: logo, "Tucker May", subheader "Professional Writing Services" (under review), photo.
+- Header: logo mark, square photo, "Tucker May", subheader (options in mockup; Tucker is a peer/community moderator, not a teacher).
 - Three columns, priority order: Books > Writing Lessons Everywhere > Scriptwriting services.
 
 ## Books (Amazon only)
 - Death of a Billionaire: hardcover, paperback, Kindle (KDP Select), audiobook. https://a.co/d/0a47KAUl (Substack uses https://a.co/d/0j6DiCPy)
 - The Lemon House Murders: hardcover, paperback, Kindle. https://a.co/d/05ZV8bDo (Substack uses https://a.co/d/0gaaofTb)
-- Upcoming: The Last Dead Guy in Hell. Cover exists, no date. Email signup for updates.
+- Upcoming: The Last Dead Guy in Hell. Cover exists, no date. Email signup goes to MailerLite, then offers a Writing Lessons Everywhere subscription.
+- One Novels page for all three books (details after homepage is final).
 - Review blurbs on the Novels page only, user-editable.
 
 ## Writing Lessons Everywhere (Substack: tuckermaymysteries.substack.com)
@@ -31,14 +34,16 @@
 - Comedy one-sheet: $250, PayPal https://www.paypal.com/ncp/payment/ZWBQS9N9BLE6G. 10 one/two-liner jokes + 5 intros/transitions/ad throws. 5-day delivery. Client owns rights; credit optional. No refunds.
 - Credentials: Northwestern Mee-Ow alum; wrote for comedy teams at The Second City, iO, iO West; late-night joke training at The Second City and The Comedy Lab.
 - All work confidential. Portfolio of PDF samples, user-editable.
-- Contact form: name, email, message.
+- Contact form: name, email, message. Plugin OK (WPForms Lite). Delivers to Tucker@TuckerMayBooks.com.
+- One-sheet topic is collected on the PayPal checkout page.
 
 ## About
 - Northwestern graduate. Lives in Pasadena with his wife and their cat, Principal Spittle.
 
 ## Socials
 - Bluesky: https://bsky.app/profile/tuckermaymysteries.bsky.social
-- Instagram, Facebook: URLs needed (current site's Instagram link points to tuckermay.com).
+- Instagram: https://www.instagram.com/tuckermaymysteries/
+- Facebook: https://www.facebook.com/people/Tucker-May-Mysteries/61556491591135/
 
 ## Success targets (monthly)
 - 10 Substack subscribers, 5 book sales, 5 ghostwriting inquiries.
