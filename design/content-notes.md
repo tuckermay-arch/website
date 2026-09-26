@@ -6,8 +6,9 @@
 - Keep existing URLs: /novels/, /portfolio/, /poetry-prose/ (redirect if slugs change).
 
 ## Visual direction
-- Palette: Concrete (cool gray #E6E7E3, charcoal #1A1C1E, pine #0E6B5C). No clay red. Scripts card: slate #34506E. Books card: more eye-catching color TBD (marigold #E8A92E proposed).
+- Palette: Concrete (cool gray #E6E7E3, charcoal #1A1C1E, pine #0E6B5C). No clay red. Scripts card: slate #34506E. Books card: color TBD; plum #5E3B5C proposed (marigold clashes with the yellow Lemon House cover).
 - Writing Lessons Everywhere card uses its own brand: navy #052E49, cream #FAF8EF, blue #2D99D1, logo in the card head.
+- Source images: design/assets/src/ (from Drive: My Drive > Author Business > Website images). Profile photo still missing.
 - Brand logo: T|M circle mark + "Tucker May Books" (design/assets/tm-logo-full.png, tm-mark.png). Header uses the mark only. Need a transparent PNG or SVG original for the build.
 - Fonts: Geist (headings, body) + Geist Mono (labels).
 - Layout: compact header, three freestanding cards with colored heading bands.
