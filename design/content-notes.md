@@ -15,12 +15,13 @@
 
 ## Homepage
 - Header: logo mark, square photo, "Tucker May", subheader "Novels · Comedy Writing · A Community for Writers" (Tucker is a peer/community moderator, not a teacher).
-- Three columns, priority order: Books > Writing Lessons Everywhere > Scriptwriting services. Books card is wider (1.35fr 1fr 1fr) and has no visible title (covers act as heading).
+- Three columns, priority order: Books > Writing Lessons Everywhere > Comedy One-Sheets. Books card is wider (1.35fr 1fr 1fr) and has no visible title (covers act as heading).
 
 ## Books (Amazon only)
 - Death of a Billionaire: hardcover, paperback, Kindle (KDP Select), audiobook. https://a.co/d/0a47KAUl (Substack uses https://a.co/d/0j6DiCPy)
 - The Lemon House Murders: hardcover, paperback, Kindle. https://a.co/d/05ZV8bDo (Substack uses https://a.co/d/0gaaofTb)
-- Upcoming: The Last Dead Guy in Hell. Cover exists, no date. Featured as a large "Coming soon" panel in the Books card. Email signup goes to MailerLite, then a second step offers a Writing Lessons Everywhere subscription (Substack confirms by email). Chosen over checkbox + manual import.
+- Upcoming: The Last Dead Guy in Hell. Cover exists, no date. Compact "Coming soon" panel in the Books card (cover smaller than the published books).
+- Hovering a published cover shows its plot summary below the buy buttons (touch devices show both). Plot summaries needed. Email signup goes to MailerLite, then a second step offers a Writing Lessons Everywhere subscription (Substack confirms by email). Chosen over checkbox + manual import.
 - One Novels page for all three books (details after homepage is final).
 - Review blurbs on the Novels page only, user-editable.
 
@@ -28,10 +29,14 @@
 - Weekly. Format: Source → Mechanism → Tool.
 - Free: weekly articles. Paid: Under the Hood Toolkit (https://writinglessonseverywhere.netlify.app/), weekly tools immediately, Plot Doctor Diagnostic course, community.
 - Pitch: "If you need to refine your draft but can't drop thousands of dollars on a book coach or narrative consultant, then Writing Lessons Everywhere is exactly what you need."
-- Embed signup; show recent posts from RSS.
+- Embed signup; show 2 recent posts from RSS on the homepage.
+- Homepage card copy after the signup: "If you need to refine your draft... exactly what you need." + "Become a paid subscriber to access every WLE worksheet in the Under the Hood Toolkit." + link to the Toolkit database.
 
-## Scriptwriting / ghostwriting
-- Full scripts: contact for pricing.
+## Other pages (on hold)
+- Proposed outline in chat: Novels, Writing Lessons, Comedy One-Sheets, YouTube Scripts, About, Contact, Blog, Other Writing.
+
+## Comedy one-sheets (homepage card is one-sheets only, for movie and TV podcasts)
+- YouTube scriptwriting moves to its own page (not on the homepage). Full scripts: contact for pricing.
 - Comedy one-sheet: $250, PayPal https://www.paypal.com/ncp/payment/ZWBQS9N9BLE6G. 10 one/two-liner jokes + 5 intros/transitions/ad throws. 5-day delivery. Client owns rights; credit optional. No refunds.
 - Credentials: Northwestern Mee-Ow alum; wrote for comedy teams at The Second City, iO, iO West; late-night joke training at The Second City and The Comedy Lab.
 - All work confidential. Portfolio of PDF samples, user-editable.
