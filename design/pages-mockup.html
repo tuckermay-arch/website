@@ -250,7 +250,10 @@
   .book-row { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: clamp(24px, 4cqi, 56px); align-items: start; }
   .book-row .cover-img { box-shadow: 0 2px 4px rgba(0,0,0,.2), 0 24px 44px -18px rgba(0,0,0,.55); }
   .book-info { display: grid; gap: 16px; align-content: start; }
-  .book-info .desc { font-size: 17px; line-height: 1.65; max-width: 62ch; }
+  .book-info .desc { font-size: 16px; line-height: 1.65; max-width: 64ch; display: grid; gap: 12px; }
+  .book-info .desc .hook { font-size: 19px; font-weight: 600; line-height: 1.4; letter-spacing: -.01em; }
+  .book-info .desc .fans { font-size: 14px; color: var(--muted); padding-top: 12px; border-top: 1px solid var(--line); }
+  .book-info .desc cite { font-style: italic; }
   .badge { display: inline-flex; align-items: center; gap: 8px; font: 600 12px var(--label); text-transform: uppercase; letter-spacing: .06em; color: var(--accent); }
   .badge::before { content: "★"; font-size: 15px; }
   .reviews { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 8px; }
@@ -331,7 +334,7 @@
 <section class="controls" aria-label="Mockup controls">
   <div>
     <h1>Page mockups: tuckermay.com</h1>
-    <p>Pick a page. Text in [brackets] is a placeholder for content you’ll send. The Toy Story 4 summary comes from your draft in Google Drive.</p>
+    <p>Pick a page. Text in [brackets] is a placeholder; review quotes will be editable spots in WordPress. The Toy Story 4 summary comes from your draft in Google Drive.</p>
   </div>
 </section>
 <nav class="tabs" aria-label="Pages">
@@ -383,10 +386,10 @@
       <div class="book-info">
         <p class="eyebrow">A murder mystery novel</p>
         <h2>Death of a Billionaire</h2>
-        <p class="desc placeholder">[Back-cover description of Death of a Billionaire. This is the longer version; the homepage hover uses the short one.]</p>
+        <div class="desc"><p class="hook">Ever dream of killing your boss? Alan Benning knows how you feel.</p><p>The problem: his billionaire boss actually winds up murdered. And the whole world thinks he did it.</p><p>When globetrotting tech billionaire Barron Fisk is found dead on the floor of his swanky Silicon Valley office, all evidence points to Alan.</p><p>Alan must venture into the glitzy, treacherous world of tech billionaires to clear his name by sorting through a long list of suspects with motive aplenty. If he can’t find the real culprit, Alan’s going down. The clock is ticking.</p><p>Who killed Barron Fisk? The truth will shock— and change— the entire world.</p><p class="fans">Fans of Richard Osman’s <cite>The Thursday Murder Club</cite> series, Carl Hiaasen’s tales of high-stakes hijinx, or Ruth Ware’s page-turning mysteries will love <cite>Death of a Billionaire</cite>.</p></div>
         <ul class="formats"><li>Hardcover</li><li>Paperback</li><li>Kindle</li><li>Audiobook</li></ul>
         <div class="btn-row"><a class="btn solid" href="https://a.co/d/0a47KAUl" target="_blank" rel="noopener">Buy on Amazon</a></div>
-        <div class="reviews"><figure><span class="stars" aria-label="Five stars">★★★★★</span><blockquote class="placeholder">[Review quote 1]</blockquote><figcaption>[Reviewer, source]</figcaption></figure><figure><span class="stars" aria-label="Five stars">★★★★★</span><blockquote class="placeholder">[Review quote 2]</blockquote><figcaption>[Reviewer, source]</figcaption></figure><figure><span class="stars" aria-label="Five stars">★★★★★</span><blockquote class="placeholder">[Review quote 3]</blockquote><figcaption>[Reviewer, source]</figcaption></figure></div>
+        <div class="reviews"><figure><span class="stars" aria-label="Five stars">★★★★★</span><blockquote class="placeholder">[Review 1]</blockquote><figcaption>Editable in WordPress</figcaption></figure><figure><span class="stars" aria-label="Five stars">★★★★★</span><blockquote class="placeholder">[Review 2]</blockquote><figcaption>Editable in WordPress</figcaption></figure><figure><span class="stars" aria-label="Five stars">★★★★★</span><blockquote class="placeholder">[Review 3]</blockquote><figcaption>Editable in WordPress</figcaption></figure></div>
       </div>
     </article>
 
@@ -395,10 +398,10 @@
       <div class="book-info">
         <p class="badge">Readers’ Favorite five-star review</p>
         <h2>The Lemon House Murders</h2>
-        <p class="desc placeholder">[Back-cover description of The Lemon House Murders.]</p>
+        <div class="desc"><p class="hook">A string of mysterious deaths . . . A house full of suspects . . . A secret that will change everything . . .</p><p>When residents of a live-in drug rehabilitation facility called Lemon House start dying one by one, no one in the outside world seems to care.</p><p>Two Lemon House patients, nicknamed Trip and Gobstopper, are the only ones who can see the truth: these are murders.</p><p>Their quest to find the killer will push their budding relationship to the brink, cast suspicion on everyone locked in the house with them, and force them to question their most cherished beliefs.</p><p><cite>The Lemon House Murders</cite> is the rare murder mystery that will have you guessing at the culprit AND thinking deeply about theology, society’s relationship toward the downtrodden, and the importance of self-determination to a fulfilling life.</p><p class="fans">Fans of Agatha Christie, Ruth Ware, and locked-room mysteries of all kinds will LOVE <cite>The Lemon House Murders</cite>.</p></div>
         <ul class="formats"><li>Hardcover</li><li>Paperback</li><li>Kindle</li></ul>
         <div class="btn-row"><a class="btn solid" href="https://a.co/d/05ZV8bDo" target="_blank" rel="noopener">Buy on Amazon</a></div>
-        <div class="reviews"><figure><span class="stars" aria-label="Five stars">★★★★★</span><blockquote class="placeholder">[Review quote 1]</blockquote><figcaption>[Reviewer, source]</figcaption></figure><figure><span class="stars" aria-label="Five stars">★★★★★</span><blockquote class="placeholder">[Review quote 2]</blockquote><figcaption>[Reviewer, source]</figcaption></figure><figure><span class="stars" aria-label="Five stars">★★★★★</span><blockquote class="placeholder">[Review quote 3]</blockquote><figcaption>[Reviewer, source]</figcaption></figure></div>
+        <div class="reviews"><figure><span class="stars" aria-label="Five stars">★★★★★</span><blockquote class="placeholder">[Review 1]</blockquote><figcaption>Editable in WordPress</figcaption></figure><figure><span class="stars" aria-label="Five stars">★★★★★</span><blockquote class="placeholder">[Review 2]</blockquote><figcaption>Editable in WordPress</figcaption></figure><figure><span class="stars" aria-label="Five stars">★★★★★</span><blockquote class="placeholder">[Review 3]</blockquote><figcaption>Editable in WordPress</figcaption></figure></div>
       </div>
     </article>
 
@@ -407,7 +410,7 @@
       <div class="book-info">
         <p class="eyebrow">Coming soon</p>
         <h2>The Last Dead Guy in Hell</h2>
-        <p class="desc placeholder">[Teaser for The Last Dead Guy in Hell, if you want one. Otherwise this line goes.]</p>
+        <p class="desc">When a creative loner’s best friend goes missing, the quest to find him uncovers a conspiracy that threatens all of existence as we know it.</p>
         <p>Be the first to hear the release date.</p>
         <form class="signup" onsubmit="event.preventDefault()">
           <label for="n-email" hidden>Email</label>
@@ -481,7 +484,7 @@
             <li>The Writing Lessons Everywhere community on Substack chat</li>
             <li><span>Book club <span class="soon-tag">Coming soon</span></span></li>
           </ul>
-          <div class="btn-row"><a class="btn solid" href="#">Become a paid subscriber</a></div>
+          <div class="btn-row"><a class="btn solid" href="https://tuckermaymysteries.substack.com/subscribe" target="_blank" rel="noopener">Become a paid subscriber</a></div>
         </div>
       </div>
     </section>
