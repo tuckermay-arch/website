@@ -1,0 +1,58 @@
+<?php
+/**
+ * Title: Portfolio page
+ * Slug: tuckermay/page-portfolio
+ * Categories: tuckermay-pages
+ * Description: Hub page linking every sample section (keeps the old /portfolio/ link working).
+ * Block Types: core/post-content
+ * Post Types: page
+ * Viewport width: 1400
+ *
+ * @package tuckermay
+ */
+?>
+<!-- wp:group {"className":"tm-page"} -->
+<div class="wp-block-group tm-page"><!-- wp:group {"className":"tm-hero"} -->
+<div class="wp-block-group tm-hero"><!-- wp:paragraph {"className":"tm-eyebrow"} -->
+<p class="tm-eyebrow">Portfolio</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Everything I’ve written</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"className":"tm-lede"} -->
+<p class="tm-lede">Novels, scripts, jokes, and essays in one place. Pick a section.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"tm-port-grid"} -->
+<div class="wp-block-group tm-port-grid"><!-- wp:paragraph {"className":"tm-port tm-port--pine"} -->
+<p class="tm-port tm-port--pine"><a href="<?php echo esc_url( home_url( '/novels/' ) ); ?>"><strong>Novels</strong> Death of a Billionaire, The Lemon House Murders, and The Last Dead Guy in Hell</a></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"tm-port tm-port--ink"} -->
+<p class="tm-port tm-port--ink"><a href="<?php echo esc_url( home_url( '/screenplays/' ) ); ?>"><strong>Screenplays</strong> Feature scripts, available on request</a></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"tm-port tm-port--ink"} -->
+<p class="tm-port tm-port--ink"><a href="<?php echo esc_url( home_url( '/tv-shows/' ) ); ?>"><strong>TV Shows</strong> Original pilots and spec scripts to read</a></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"tm-port tm-port--ink"} -->
+<p class="tm-port tm-port--ink"><a href="<?php echo esc_url( home_url( '/poetry-prose/' ) ); ?>"><strong>Poetry / Short Stories</strong> Short fiction and poems to read</a></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"tm-port tm-port--slate"} -->
+<p class="tm-port tm-port--slate"><a href="<?php echo esc_url( home_url( '/youtube-scripts/' ) ); ?>"><strong>YouTube script samples</strong> Explainers, commentary, and video listicles</a></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"tm-port tm-port--slate"} -->
+<p class="tm-port tm-port--slate"><a href="<?php echo esc_url( home_url( '/comedy-one-sheets/' ) ); ?>"><strong>Comedy one-sheets</strong> Example joke sheets for movie and TV podcasts</a></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"tm-port tm-port--navy"} -->
+<p class="tm-port tm-port--navy"><a href="<?php echo esc_url( home_url( '/writing-lessons-everywhere/' ) ); ?>"><strong>Writing Lessons Everywhere</strong> Weekly writing lessons on Substack</a></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
