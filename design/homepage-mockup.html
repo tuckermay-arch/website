@@ -213,6 +213,8 @@
   .foot { background: var(--foot, var(--deep)); color: var(--on-foot, var(--on-deep)); border-top: 1px solid var(--line); padding-block: 28px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 14px; }
   .foot nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
   .foot a { text-decoration: none; opacity: .9; }
+  .foot-left { display: inline-flex; flex-wrap: wrap; gap: 6px 18px; align-items: center; }
+  .foot-left a { font-size: 13px; opacity: .75; text-decoration: underline; text-underline-offset: 3px; }
 
   /* Narrow: stack in priority order */
   @container (max-width: 820px) {
@@ -381,8 +383,8 @@
     </main>
 
     <footer class="wrap foot">
-      <span>© 2026 Tucker May</span>
-      <nav><a href="https://www.instagram.com/tuckermaymysteries/" target="_blank" rel="noopener">Instagram</a><a href="https://bsky.app/profile/tuckermaymysteries.bsky.social" target="_blank" rel="noopener">Bluesky</a><a href="https://www.facebook.com/people/Tucker-May-Mysteries/61556491591135/" target="_blank" rel="noopener">Facebook</a><a href="#">Contact</a></nav>
+      <span class="foot-left">© 2026 Tucker May <a href="#privacy">Privacy Policy</a></span>
+      <nav><a href="https://www.instagram.com/tuckermaymysteries/" target="_blank" rel="noopener">Instagram</a><a href="https://bsky.app/profile/tuckermaymysteries.bsky.social" target="_blank" rel="noopener">Bluesky</a><a href="https://www.facebook.com/people/Tucker-May-Mysteries/61556491591135/" target="_blank" rel="noopener">Facebook</a><a href="#contact">Contact</a></nav>
     </footer>
   </div>
 </div>

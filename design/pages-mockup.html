@@ -215,6 +215,8 @@
   .foot { background: var(--foot, var(--deep)); color: var(--on-foot, var(--on-deep)); border-top: 1px solid var(--line); padding-block: 28px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 14px; }
   .foot nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
   .foot a { text-decoration: none; opacity: .9; }
+  .foot-left { display: inline-flex; flex-wrap: wrap; gap: 6px 18px; align-items: center; }
+  .foot-left a { font-size: 13px; opacity: .75; text-decoration: underline; text-underline-offset: 3px; }
 
   /* Narrow: stack in priority order */
   @container (max-width: 820px) {
@@ -391,6 +393,12 @@
     .about img.portrait { max-width: 280px; }
   }
 
+  .legal { display: grid; gap: 14px; max-width: 780px; font-size: 16px; line-height: 1.7; }
+  .legal h2 { font-size: 22px; margin-top: 10px; }
+  .legal ul { margin: 0; padding-left: 20px; display: grid; gap: 8px; }
+  .draft-note { font: 13px var(--label); background: var(--field); border: 1px dashed var(--line); border-radius: 10px; padding: 10px 14px; color: var(--muted); }
+  .editor-note { max-width: 1240px; margin: -4px auto 16px; font-size: 13px; color: var(--ui-muted); }
+
 </style>
 
 <section class="controls" aria-label="Mockup controls">
@@ -410,6 +418,7 @@
   <a href="#about">About</a>
   <a href="#blog">Blog</a>
   <a href="#contact">Contact</a>
+  <a href="#privacy">Privacy Policy</a>
 </nav>
 
 <div class="stage" id="stage">
@@ -712,31 +721,29 @@
 
   <section class="page wrap" id="screenplays" data-page hidden>
     <div class="page-hero"><p class="eyebrow">Other writing</p><h1>Screenplays</h1><p class="lede">Feature scripts available to read on request.</p></div>
-    <div class="entries"><article class="panel entry">
-        <div class="body"><p class="meta">[Genre]</p><h2>[Screenplay title 1]</h2><p class="logline placeholder">[Logline]</p><p class="summary-txt placeholder">[Brief summary, two or three sentences.]</p></div>
-        <button class="btn solid req-btn" type="button">Request script</button>
-        <form class="form request" onsubmit="event.preventDefault()">
-          <div class="row2"><label>Name<input type="text"></label><label>Email<input type="email"></label></div>
-          <label>Anything I should know? (optional)<textarea style="min-height:80px"></textarea></label>
-          <div><button class="btn solid" type="submit">Send request for [Screenplay title 1]</button></div>
-        </form>
-      </article><article class="panel entry">
-        <div class="body"><p class="meta">[Genre]</p><h2>[Screenplay title 2]</h2><p class="logline placeholder">[Logline]</p><p class="summary-txt placeholder">[Brief summary, two or three sentences.]</p></div>
-        <button class="btn solid req-btn" type="button">Request script</button>
-        <form class="form request" onsubmit="event.preventDefault()">
-          <div class="row2"><label>Name<input type="text"></label><label>Email<input type="email"></label></div>
-          <label>Anything I should know? (optional)<textarea style="min-height:80px"></textarea></label>
-          <div><button class="btn solid" type="submit">Send request for [Screenplay title 2]</button></div>
-        </form>
-      </article><article class="panel entry">
-        <div class="body"><p class="meta">[Genre]</p><h2>[Screenplay title 3]</h2><p class="logline placeholder">[Logline]</p><p class="summary-txt placeholder">[Brief summary, two or three sentences.]</p></div>
-        <button class="btn solid req-btn" type="button">Request script</button>
-        <form class="form request" onsubmit="event.preventDefault()">
-          <div class="row2"><label>Name<input type="text"></label><label>Email<input type="email"></label></div>
-          <label>Anything I should know? (optional)<textarea style="min-height:80px"></textarea></label>
-          <div><button class="btn solid" type="submit">Send request for [Screenplay title 3]</button></div>
-        </form>
-      </article></div>
+    <div class="entries">
+      <article class="panel entry">
+        <div class="body"><p class="meta">[Genre]</p><h2 class="entry-title">[Screenplay title 1]</h2><p class="logline placeholder">[Logline]</p><p class="summary-txt placeholder">[Brief summary, two or three sentences.]</p></div>
+        <a class="btn solid req-btn" href="#request">Request script</a>
+      </article>
+      <article class="panel entry">
+        <div class="body"><p class="meta">[Genre]</p><h2 class="entry-title">[Screenplay title 2]</h2><p class="logline placeholder">[Logline]</p><p class="summary-txt placeholder">[Brief summary, two or three sentences.]</p></div>
+        <a class="btn solid req-btn" href="#request">Request script</a>
+      </article>
+      <article class="panel entry">
+        <div class="body"><p class="meta">[Genre]</p><h2 class="entry-title">[Screenplay title 3]</h2><p class="logline placeholder">[Logline]</p><p class="summary-txt placeholder">[Brief summary, two or three sentences.]</p></div>
+        <a class="btn solid req-btn" href="#request">Request script</a>
+      </article>
+    </div>
+    <section class="panel" id="request" style="display:grid;gap:16px">
+      <div class="section-head" style="margin:0"><p class="eyebrow">Request a script</p><h2>Which one would you like to read?</h2></div>
+      <form class="form" onsubmit="event.preventDefault()">
+        <label for="r-script">Script<input id="r-script" type="text" placeholder="Click “Request script” on any title above"></label>
+        <div class="row2"><label for="r-name">Name<input id="r-name" type="text"></label><label for="r-email">Email<input id="r-email" type="email"></label></div>
+        <label for="r-msg">Anything I should know? (optional)<textarea id="r-msg" style="min-height:80px"></textarea></label>
+        <div><button class="btn solid" type="submit">Send request</button></div>
+      </form>
+    </section>
   </section>
 
   <section class="page wrap" id="tv" data-page hidden>
@@ -808,9 +815,35 @@
     <p style="display:flex;gap:18px;flex-wrap:wrap"><a href="https://www.instagram.com/tuckermaymysteries/" target="_blank" rel="noopener">Instagram</a><a href="https://bsky.app/profile/tuckermaymysteries.bsky.social" target="_blank" rel="noopener">Bluesky</a><a href="https://www.facebook.com/people/Tucker-May-Mysteries/61556491591135/" target="_blank" rel="noopener">Facebook</a></p>
   </section>
 
+  <section class="page wrap" id="privacy" data-page hidden>
+    <div class="page-hero"><p class="eyebrow">Legal</p><h1>Privacy Policy</h1><p class="lede">Last updated: [date]</p></div>
+    <div class="panel legal">
+      <p class="draft-note">Draft for Tucker to review. WordPress also generates a starter policy under Settings → Privacy.</p>
+      <h2>Who I am</h2>
+      <p>This website, tuckermay.com, is run by Tucker May, an author based in Pasadena, California. Questions about this policy can go to Tucker@TuckerMayBooks.com.</p>
+      <h2>What I collect</h2>
+      <ul>
+        <li><b>Contact and script-request forms:</b> your name, email address, the topic you choose, and your message. I use these only to reply to you.</li>
+        <li><b>Book release updates:</b> your email address, stored by MailerLite, the service that sends the emails.</li>
+        <li><b>Writing Lessons Everywhere:</b> when you subscribe, your email address goes to Substack. Substack’s privacy policy covers that subscription.</li>
+        <li><b>Basic site data:</b> like most websites, the hosting server records technical information such as IP address and browser type for security and troubleshooting.</li>
+      </ul>
+      <h2>Third-party services</h2>
+      <p>Some links and features hand you off to other companies, each with its own privacy policy: Amazon (book purchases), PayPal (one-sheet payments), Substack (newsletter), MailerLite (release emails), Google Docs (sample scripts), and Instagram, Bluesky, and Facebook (social links).</p>
+      <h2>Cookies</h2>
+      <p>[List any cookies the site uses, for example from WordPress, an analytics tool, or embedded forms. If there’s no analytics, say so here.]</p>
+      <h2>What I don’t do</h2>
+      <p>I don’t sell or rent your personal information, and I don’t share it except with the services listed above that are needed to run the site.</p>
+      <h2>Your choices</h2>
+      <p>You can unsubscribe from any email with the link at the bottom of it. To see, correct, or delete the information I hold about you, email Tucker@TuckerMayBooks.com.</p>
+      <h2>Changes</h2>
+      <p>If this policy changes, I’ll update it here and change the date at the top.</p>
+    </div>
+  </section>
+
     <footer class="wrap foot">
-      <span>© 2026 Tucker May</span>
-      <nav><a href="https://www.instagram.com/tuckermaymysteries/" target="_blank" rel="noopener">Instagram</a><a href="https://bsky.app/profile/tuckermaymysteries.bsky.social" target="_blank" rel="noopener">Bluesky</a><a href="https://www.facebook.com/people/Tucker-May-Mysteries/61556491591135/" target="_blank" rel="noopener">Facebook</a><a href="#">Contact</a></nav>
+      <span class="foot-left">© 2026 Tucker May <a href="#privacy">Privacy Policy</a></span>
+      <nav><a href="https://www.instagram.com/tuckermaymysteries/" target="_blank" rel="noopener">Instagram</a><a href="https://bsky.app/profile/tuckermaymysteries.bsky.social" target="_blank" rel="noopener">Bluesky</a><a href="https://www.facebook.com/people/Tucker-May-Mysteries/61556491591135/" target="_blank" rel="noopener">Facebook</a><a href="#contact">Contact</a></nav>
     </footer>
   </div>
 </div>
@@ -828,6 +861,10 @@
     const id = a.getAttribute('href').slice(1);
     if (pages.some(p => p.id === id)) { e.preventDefault(); show(id); window.scrollTo(0, 0); }
   }));
-  document.querySelectorAll('.req-btn').forEach(b => b.addEventListener('click', () => { b.parentElement.querySelector('.request').classList.toggle('open'); }));
+  document.querySelectorAll('.req-btn').forEach(b => b.addEventListener('click', e => {
+    e.preventDefault();
+    const f = document.getElementById('r-script'); f.value = b.closest('.entry').querySelector('.entry-title').textContent;
+    document.getElementById('request').scrollIntoView({ behavior: 'smooth', block: 'start' }); f.focus({ preventScroll: true });
+  }));
   show(location.hash.slice(1));
 </script>
