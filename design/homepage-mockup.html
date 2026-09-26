@@ -70,14 +70,22 @@
   .wrap { padding-inline: clamp(20px, 4cqi, 56px); }
 
   /* Compact header */
-  .masthead { display: flex; align-items: center; gap: clamp(12px, 2cqi, 24px); padding-block: 14px; border-bottom: 1px solid var(--line); }
+  .masthead { display: flex; flex-wrap: wrap; align-items: center; gap: 0 clamp(12px, 2cqi, 24px); padding-block: 14px 0; border-bottom: 1px solid var(--line); }
   .logo-mark { width: 46px; height: 46px; flex-shrink: 0; display: block; }
   .logo { display: inline-grid; place-items: center; width: 40px; height: 40px; flex-shrink: 0; border: 1.5px dashed var(--muted); border-radius: 6px; font: 600 9px/1 var(--label); color: var(--muted); text-align: center; }
   .id { display: flex; align-items: center; gap: 12px; min-width: 0; text-decoration: none; }
   .photo { width: 56px; height: 56px; flex-shrink: 0; border-radius: 10px; object-fit: cover; display: block; border: 1px solid var(--line); }
   .id-name { font-family: var(--display); font-weight: var(--display-weight); font-size: clamp(22px, 2.4cqi, 30px); line-height: 1; margin: 0; }
   .id-sub { font-family: var(--body); font-size: 13px; font-weight: 600; color: var(--accent); margin: 5px 0 0; white-space: nowrap; }
-  .menu { display: flex; flex-wrap: nowrap; white-space: nowrap; justify-content: flex-end; gap: 4px 16px; list-style: none; margin: 0 0 0 auto; padding: 0; font-size: 14px; }
+  .menu { flex: 1 0 100%; order: 10; display: flex; flex-wrap: nowrap; white-space: nowrap; gap: 4px 26px; list-style: none; margin: 14px 0 0; padding: 12px 0 13px; border-top: 1px solid var(--line); font-size: 14px; font-weight: 500; }
+  .menu > li { position: relative; }
+  .menu .sub-toggle { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; display: inline-flex; align-items: center; gap: 5px; }
+  .menu .sub-toggle::after { content: ""; width: 6px; height: 6px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); }
+  .menu .sub { position: absolute; top: calc(100% + 13px); left: -14px; z-index: 20; min-width: 210px; list-style: none; margin: 0; padding: 8px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 16px 36px -14px var(--shadow); opacity: 0; visibility: hidden; transform: translateY(-4px); transition: opacity .15s, transform .15s, visibility .15s; }
+  .menu .sub::before { content: ""; position: absolute; left: 0; right: 0; top: -14px; height: 14px; }
+  .menu .has-sub:hover .sub, .menu .has-sub:focus-within .sub { opacity: 1; visibility: visible; transform: none; }
+  .menu .sub a { display: block; padding: 9px 12px; border-radius: 8px; }
+  .menu .sub a:hover { background: var(--field); text-decoration: none; }
   .menu a { text-decoration: none; }
   .menu a:hover { text-decoration: underline; text-underline-offset: 4px; }
   .burger { display: none; margin-left: auto; font-family: var(--label); font-size: 13px; border: 1px solid var(--line); padding: 6px 12px; border-radius: 4px; }
@@ -215,7 +223,7 @@
     .photo { width: 48px; height: 48px; }
     .id-sub { white-space: normal; font-size: 12px; }
   }
-  @container (max-width: 1220px) { .menu { display: none; } .burger { display: inline-block; } }
+  @container (max-width: 900px) { .menu { display: none; } .burger { display: inline-block; } .masthead { padding-block: 14px; } }
   @media (prefers-reduced-motion: reduce) { .site, .pillar, .pillar-foot::after { transition: none; } .pillar:hover { transform: none; } }
 </style>
 
@@ -244,10 +252,17 @@
       </a>
       <ul class="menu">
         <li><a href="#">Books</a></li>
-        <li><a href="#">Writing Lessons</a></li>
+        <li><a href="#">Writing Lessons Everywhere</a></li>
         <li><a href="#">Comedy One-Sheets</a></li>
         <li><a href="#">YouTube Scripts</a></li>
-        <li><a href="#">Other Writing</a></li>
+        <li class="has-sub">
+          <button class="sub-toggle" type="button" aria-haspopup="true">Other Writing</button>
+          <ul class="sub">
+            <li><a href="#">Screenplays</a></li>
+            <li><a href="#">TV Shows</a></li>
+            <li><a href="#">Poetry / Short Stories</a></li>
+          </ul>
+        </li>
         <li><a href="#">Blog</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>

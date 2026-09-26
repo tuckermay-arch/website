@@ -32,8 +32,14 @@
 - Embed signup; show 2 recent posts from RSS on the homepage.
 - Homepage card copy after the signup: "If you need to refine your draft... exactly what you need." + "Become a paid subscriber to access every WLE worksheet in the Under the Hood Toolkit." + link to the Toolkit database.
 
-## Other pages (on hold)
-- Proposed outline in chat: Novels, Writing Lessons, Comedy One-Sheets, YouTube Scripts, About, Contact, Blog, Other Writing.
+## Navigation
+- Books · Writing Lessons Everywhere · Comedy One-Sheets · YouTube Scripts · Other Writing (dropdown: Screenplays, TV Shows, Poetry / Short Stories) · Blog · About · Contact. Menu sits on its own row under the name.
+
+## Inner pages (mockups: design/pages-mockup.html)
+- Novels: two descriptions per book (short for homepage hover, long for this page); 3 review quotes per book (Tucker has them); audiobook uses the same Amazon link; Coming Soon at the bottom; WLE cross-sell.
+- WLE: paid $12/month or $50/year. Community = Substack chat; book club coming soon. Sample post: Toy Story 4 (https://tuckermaymysteries.substack.com/p/toy-story-4-writing-lesson; draft in Drive "toy_story_4_catharsis_engine.md").
+- Comedy One-Sheets: example PDFs from Drive (Author Business > Online Content > Podcast One-Sheets): The White Lotus, Severance, Project Hail Mary, The Devil Wears Prada 2, Weapons (design/assets/src/one-sheets/). Keep the existing FAQ. "Studies prove" line rewritten without the claim.
+- Still to answer: YouTube Scripts (offer, process, samples, pricing), About bio/photo, Other Writing content (Screenplays, TV Shows, Poetry / Short Stories), Blog format.
 
 ## Comedy one-sheets (homepage card is one-sheets only, for movie and TV podcasts)
 - YouTube scriptwriting moves to its own page (not on the homepage). Full scripts: contact for pricing.
