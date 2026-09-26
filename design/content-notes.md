@@ -6,20 +6,20 @@
 - Keep existing URLs: /novels/, /portfolio/, /poetry-prose/ (redirect if slugs change).
 
 ## Visual direction
-- Palette: Concrete (cool gray #E6E7E3, charcoal #1A1C1E, pine #0E6B5C). No clay red. Scripts card color TBD (pine proposed).
+- Palette: Concrete (cool gray #E6E7E3, charcoal #1A1C1E, pine #0E6B5C). No clay red. Scripts card: slate #34506E. Books card: more eye-catching color TBD (marigold #E8A92E proposed).
 - Writing Lessons Everywhere card uses its own brand: navy #052E49, cream #FAF8EF, blue #2D99D1, logo in the card head.
 - Brand logo: T|M circle mark + "Tucker May Books" (design/assets/tm-logo-full.png, tm-mark.png). Header uses the mark only. Need a transparent PNG or SVG original for the build.
 - Fonts: Geist (headings, body) + Geist Mono (labels).
 - Layout: compact header, three freestanding cards with colored heading bands.
 
 ## Homepage
-- Header: logo mark, square photo, "Tucker May", subheader (options in mockup; Tucker is a peer/community moderator, not a teacher).
+- Header: logo mark, square photo, "Tucker May", subheader "Novels · Comedy Writing · A Community for Writers" (Tucker is a peer/community moderator, not a teacher).
 - Three columns, priority order: Books > Writing Lessons Everywhere > Scriptwriting services.
 
 ## Books (Amazon only)
 - Death of a Billionaire: hardcover, paperback, Kindle (KDP Select), audiobook. https://a.co/d/0a47KAUl (Substack uses https://a.co/d/0j6DiCPy)
 - The Lemon House Murders: hardcover, paperback, Kindle. https://a.co/d/05ZV8bDo (Substack uses https://a.co/d/0gaaofTb)
-- Upcoming: The Last Dead Guy in Hell. Cover exists, no date. Email signup goes to MailerLite, then offers a Writing Lessons Everywhere subscription.
+- Upcoming: The Last Dead Guy in Hell. Cover exists, no date. Email signup goes to MailerLite, then a second step offers a Writing Lessons Everywhere subscription (Substack confirms by email). Chosen over checkbox + manual import.
 - One Novels page for all three books (details after homepage is final).
 - Review blurbs on the Novels page only, user-editable.
 
