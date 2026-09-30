@@ -76,4 +76,7 @@
 - New samples: JPG images from Drive (Author Business > Comedy One-Sheets Business > One-Sheet Samples), same five shows; design/assets/src/one-sheets-v2/.
 - YouTube Scripts page stays separate (full scripts); link between them.
 - Thank-you page at /thank-you/: one page, a "what happens next" section per package, contact tucker@tuckermaybooks.com, WLE subscribe link. Not in menu, hidden from search. PayPal buttons redirect there after payment.
-- Open: retainer refund/cancellation policy; how retainer clients send new topics.
+- Refunds: first one-sheet order is a risk-free trial (refund if none of the jokes are used); later one-sheets not refundable. Retainers: cancel anytime, no refunds.
+- Retainer topics: client gets a new PayPal invoice each month and lists that month's topics when paying it.
+- "Lines from real one-sheets" rotates 15 jokes (3 per sample sheet, edgier lines skipped), 3 at a time every 7s, pause on hover, "Show me more" button. Editable as blocks.
+- Homepage: WLE logo and "Comedy Ghostwriting" card titles link to their pages.
