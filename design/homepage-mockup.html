@@ -99,7 +99,7 @@
   .pillar.p2 .pillar-head { background: var(--tone2); color: var(--on2); }
   .pillar.p3 .pillar-head { background: var(--tone3); color: var(--on3); }
   .pillar-head .kicker { font-family: var(--label); text-transform: var(--label-case); letter-spacing: var(--label-track); font-size: 12px; font-weight: 600; opacity: .8; margin: 0; }
-  .pillar-head h2 { font-family: var(--display); font-weight: var(--display-weight); font-size: clamp(32px, 3.6cqi, 48px); line-height: .98; margin: 0; text-wrap: balance; }
+  .pillar-head h2 { font-family: var(--display); font-weight: var(--display-weight); font-size: clamp(28px, 3cqi, 40px); line-height: 1; overflow-wrap: break-word; hyphens: manual; margin: 0; text-wrap: balance; }
   .pillar-head .tag { font-size: 15px; line-height: 1.4; margin: 2px 0 0; opacity: .92; }
   /* Writing Lessons Everywhere card carries its own brand */
   .pillar.p2 { --wle-navy:#052E49; --wle-cream:#FAF8EF; --wle-blue:#2D99D1; --accent:#052E49; --on-accent:#FFFFFF; }
@@ -206,6 +206,9 @@
   .includes li { display: grid; grid-template-columns: 16px 1fr; gap: 8px; }
   .includes li::before { content: "✓"; font-weight: 700; }
   .how { font-size: 14px; color: var(--muted); }
+  .trial-badge { justify-self: start; font: 700 11px var(--label); text-transform: uppercase; letter-spacing: .06em; padding: 4px 9px; border-radius: 999px; background: #0E6B5C; color: #fff; }
+  .retainer-line { font-size: 14px; font-weight: 600; }
+  .retainer-line a { color: #34506E; text-underline-offset: 3px; }
   .confidential { font: 12px var(--label); color: var(--muted); display: flex; gap: 8px; align-items: center; }
   .confidential::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
 
@@ -232,7 +235,7 @@
 <section class="controls" aria-label="Mockup controls">
   <div>
     <h1>Homepage mockup: tuckermay.com</h1>
-    <p>Final homepage design: Concrete palette, Geist fonts, wider pine Books card with covers in the heading, slate Comedy One-Sheets card. Try “Notify me” in the Books card to see the newsletter follow-up. The Substack posts are placeholders.</p>
+    <p>Final homepage design: Concrete palette, Geist fonts, wider pine Books card with covers in the heading, slate Comedy Ghostwriting card. Try “Notify me” in the Books card to see the newsletter follow-up. The Substack posts are placeholders.</p>
   </div>
   <div class="ctl-row" data-ctl="view" role="group" aria-label="Screen">
     <span class="ctl-label">Screen</span>
@@ -255,7 +258,7 @@
       <ul class="menu">
         <li><a href="#">Books</a></li>
         <li><a href="#">Writing Lessons Everywhere</a></li>
-        <li><a href="#">Comedy One-Sheets</a></li>
+        <li><a href="#">Comedy Ghostwriting</a></li>
         <li><a href="#">YouTube Scripts</a></li>
         <li class="has-sub">
           <button class="sub-toggle" type="button" aria-haspopup="true">Other Writing</button>
@@ -360,25 +363,26 @@
       <!-- 3. Comedy one-sheets -->
       <section class="pillar p3">
         <div class="pillar-head">
-          <p class="kicker">For movie and TV podcasts</p>
-          <h2>Comedy One-Sheets</h2>
-          <p class="tag">Custom jokes written for the show your next episode covers.</p>
+          <p class="kicker">For podcasts and YouTube channels</p>
+          <h2>Comedy Ghostwriting</h2>
+          <p class="tag">Custom jokes and ad throws for your next episode or video.</p>
         </div>
         <div class="pillar-body">
           <p class="creds">Alum of Northwestern’s Mee-Ow sketch show. Has written for comedy teams at The Second City, iO, and iO West.</p>
           <div class="offer feature">
+            <span class="trial-badge">Risk-free trial</span>
             <div class="offer-head"><h3>Custom one-sheet</h3><span class="price">$250</span></div>
             <ul class="includes">
-              <li>10 late-night-style one- and two-liner jokes</li>
-              <li>5 intros, transitions, and ad throws</li>
+              <li>10 punch-up jokes</li>
+              <li>5 customized intros, transitions, or ad throws</li>
               <li>Delivered within 5 days</li>
-              <li>You own all rights. Credit optional.</li>
+              <li>Money back if you don’t use a single joke</li>
             </ul>
             <a class="btn solid" href="https://www.paypal.com/ncp/payment/ZWBQS9N9BLE6G" target="_blank" rel="noopener">Buy now</a>
           </div>
-          <p class="how">Tell me which movie or TV show your episode covers at checkout. Jokes on other topics work too.</p>
+          <p class="retainer-line"><a href="#">Retainers from $450/month with 3-day delivery →</a></p>
         </div>
-        <a class="pillar-foot" href="#">Examples and FAQ</a>
+        <a class="pillar-foot" href="#">Packages, samples, and FAQ</a>
       </section>
     </main>
 

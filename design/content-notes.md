@@ -69,3 +69,11 @@
 
 ## Success targets (monthly)
 - 10 Substack subscribers, 5 book sales, 5 ghostwriting inquiries.
+
+## Comedy Ghostwriting update (replaces Comedy One-Sheets)
+- Rename everywhere to "Comedy Ghostwriting"; URL /comedy-ghostwriting/ (old /comedy-one-sheets/ must redirect). Scope: podcasts AND YouTube channels (same one-sheet: 10 punch-up jokes + 5 customized intros/transitions/ad throws).
+- Packages: Single one-sheet $250, 5-day delivery, "Risk-free trial" (money back if none of the jokes are used), PayPal ZWBQS9N9BLE6G. Bi-Weekly Retainer $450/mo, 2 sheets, topics of choice, 3-day delivery, PayPal JTAVSWRCAD25U. Monthly Retainer $850/mo, 4 sheets, 3-day delivery, "Best deal", PayPal VZH39TD9YFLHA.
+- New samples: JPG images from Drive (Author Business > Comedy One-Sheets Business > One-Sheet Samples), same five shows; design/assets/src/one-sheets-v2/.
+- YouTube Scripts page stays separate (full scripts); link between them.
+- Thank-you page at /thank-you/: one page, a "what happens next" section per package, contact tucker@tuckermaybooks.com, WLE subscribe link. Not in menu, hidden from search. PayPal buttons redirect there after payment.
+- Open: retainer refund/cancellation policy; how retainer clients send new topics.
