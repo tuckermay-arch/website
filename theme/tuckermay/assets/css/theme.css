@@ -148,7 +148,11 @@ nav.tm-nav { margin-top: 14px !important; padding-block: 12px 13px; border-top: 
 }
 .tm-card.wp-block-column:hover { transform: translateY(-3px); box-shadow: 0 1px 2px var(--tm-shadow), 0 26px 50px -18px var(--tm-shadow); }
 .tm-card-head { display: grid; gap: 8px; padding: clamp(20px, 2.4vw, 30px); color: #fff; align-content: start; }
-.tm-card-head h2 { font-size: clamp(32px, 3.4vw, 48px); line-height: 0.98; color: inherit; }
+.tm-card-head h2 { font-size: clamp(28px, 2.8vw, 40px); line-height: 1; color: inherit; overflow-wrap: break-word; }
+.tm-head-link a { color: inherit; text-decoration: none; }
+.tm-head-link a:hover { text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 6px; }
+.tm-wle-wordmark a { display: block; }
+.tm-wle-wordmark a:hover img { opacity: 0.88; }
 .tm-card-head .tm-kicker { color: inherit; opacity: 0.85; }
 .tm-card-head .tm-tag { font-size: 15px; line-height: 1.4; opacity: 0.92; }
 .tm-card--books .tm-card-head { background: var(--tm-pine); }
@@ -434,3 +438,56 @@ nav.tm-nav { margin-top: 14px !important; padding-block: 12px 13px; border-top: 
 	background: transparent !important; border: 0 !important; box-shadow: none !important; padding: 6px 0 0 16px !important; min-width: 0 !important;
 }
 .tm-nav .is-menu-open .wp-block-navigation__submenu-container .wp-block-navigation-item__content { padding: 6px 0 !important; }
+
+
+/* ---------------- Comedy Ghostwriting (v1.1) ---------------- */
+.tm-trial-badge, .tm-pk-badge {
+	justify-self: start; font-family: var(--tm-mono); font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+	padding: 4px 10px; border-radius: 999px; background: var(--tm-pine); color: #fff; line-height: 1.4;
+}
+.tm-retainer-line { font-size: 14px; font-weight: 600; }
+.tm-retainer-line a { color: var(--tm-slate); text-underline-offset: 3px; }
+.tm-pks { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: stretch; margin-top: 8px; }
+.tm-pk { position: relative; display: grid; gap: 10px; align-content: start; grid-template-rows: auto auto auto auto 1fr auto; padding: clamp(22px, 2.4vw, 30px); border-radius: var(--tm-radius); background: var(--tm-surface); border: 1px solid var(--tm-line); }
+.tm-pk > * { margin: 0 !important; }
+.tm-pk .tm-pk-badge { position: absolute; top: -12px; left: 20px; }
+.tm-pk h3 { font-size: 19px; }
+.tm-pk-price { font-size: 42px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
+.tm-pk-per { font-family: var(--tm-mono); font-size: 13px; color: var(--tm-muted); }
+.tm-pk .tm-checks li::before { color: var(--tm-slate); }
+.tm-pk .wp-block-buttons, .tm-pk .wp-block-button, .tm-pk .wp-block-button__link { width: 100%; }
+.tm-pk .wp-block-button__link { background: var(--tm-slate); border-color: var(--tm-slate); }
+.tm-pk--trial { border: 2px solid var(--tm-pine); }
+.tm-pk--trial .wp-block-button__link { background: var(--tm-pine); border-color: var(--tm-pine); }
+.tm-pk--best { background: var(--tm-ink); color: #fff; border-color: var(--tm-ink); box-shadow: 0 24px 50px -24px rgba(0, 0, 0, 0.55); }
+.tm-pk--best h3 { color: #fff; }
+.tm-pk--best .tm-pk-per { color: #C9CCD0; }
+.tm-pk--best .tm-checks li::before { color: #fff; }
+.tm-pk--best .tm-pk-badge { background: #E8A92E; color: var(--tm-ink); }
+.tm-pk--best .wp-block-button__link { background: #fff; color: var(--tm-ink); border-color: #fff; }
+.tm-pk--best .wp-block-button__link:hover { background: var(--tm-base); border-color: var(--tm-base); }
+.tm-hero .wp-block-buttons { margin-top: 6px !important; }
+
+/* Rotating jokes */
+.tm-rotator > .tm-joke { transition: opacity 0.35s ease; }
+.tm-rotator.is-ready > .tm-joke[hidden] { display: none !important; }
+.tm-rotator.is-fading > .tm-joke { opacity: 0; }
+.tm-rot-next { margin-top: 18px !important; }
+.tm-rotator:not(.is-ready) + .wp-block-buttons .tm-rot-next { display: none; }
+
+/* Sample sheets open full size */
+.tm-sheets .wp-block-image { cursor: zoom-in; }
+
+/* Thank-you page */
+.tm-ty-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.tm-ty-card { position: relative; padding: 26px 20px 20px; border-radius: var(--tm-radius); background: var(--tm-surface); border: 1px solid var(--tm-line); display: grid; gap: 14px; align-content: start; }
+.tm-ty-card > * { margin: 0 !important; }
+.tm-ty-card .tm-pk-badge { position: absolute; top: -12px; left: 20px; }
+.tm-ty-card .tm-steps li { font-size: 14px; }
+.tm-ty-grid > * { margin: 0 !important; }
+
+@media (max-width: 781px) {
+	.tm-pks, .tm-ty-grid { grid-template-columns: 1fr; row-gap: 26px; }
+}
+@media (prefers-reduced-motion: reduce) { .tm-rotator > .tm-joke { transition: none; } }
+.tm-ty-grid > .tm-ty-card:last-child .tm-pk-badge { background: #E8A92E; color: var(--tm-ink); }

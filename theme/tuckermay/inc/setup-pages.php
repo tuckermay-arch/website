@@ -20,7 +20,7 @@ function tuckermay_site_pages() {
 		'home'                       => array( __( 'Home', 'tuckermay' ), 'tuckermay/page-home' ),
 		'novels'                     => array( __( 'Novels', 'tuckermay' ), 'tuckermay/page-novels' ),
 		'writing-lessons-everywhere' => array( __( 'Writing Lessons Everywhere', 'tuckermay' ), 'tuckermay/page-wle' ),
-		'comedy-one-sheets'          => array( __( 'Comedy One-Sheets', 'tuckermay' ), 'tuckermay/page-comedy' ),
+		'comedy-ghostwriting'        => array( __( 'Comedy Ghostwriting', 'tuckermay' ), 'tuckermay/page-comedy' ),
 		'youtube-scripts'            => array( __( 'YouTube Scripts', 'tuckermay' ), 'tuckermay/page-youtube' ),
 		'screenplays'                => array( __( 'Screenplays', 'tuckermay' ), 'tuckermay/page-screenplays' ),
 		'tv-shows'                   => array( __( 'TV Shows', 'tuckermay' ), 'tuckermay/page-tv' ),
@@ -30,6 +30,7 @@ function tuckermay_site_pages() {
 		'contact'                    => array( __( 'Contact', 'tuckermay' ), 'tuckermay/page-contact' ),
 		'portfolio'                  => array( __( 'Portfolio', 'tuckermay' ), 'tuckermay/page-portfolio' ),
 		'privacy-policy'             => array( __( 'Privacy Policy', 'tuckermay' ), 'tuckermay/page-privacy' ),
+		'thank-you'                  => array( __( 'Thank You', 'tuckermay' ), 'tuckermay/page-thank-you' ),
 	);
 }
 
@@ -53,7 +54,7 @@ function tuckermay_render_setup_pages() {
 	?>
 	<hr>
 	<h2><?php esc_html_e( 'Set up the site’s pages', 'tuckermay' ); ?></h2>
-	<p><?php esc_html_e( 'Creates every page in the design (Home, Novels, Writing Lessons Everywhere, Comedy One-Sheets, YouTube Scripts, Screenplays, TV Shows, Poetry / Short Stories, About, Blog, Contact, Portfolio, Privacy Policy), fills each one with its design, makes Home the front page, and sets the privacy page.', 'tuckermay' ); ?></p>
+	<p><?php esc_html_e( 'Creates every page in the design (Home, Novels, Writing Lessons Everywhere, Comedy Ghostwriting, YouTube Scripts, Screenplays, TV Shows, Poetry / Short Stories, About, Blog, Contact, Portfolio, Privacy Policy, Thank You), fills each one with its design, makes Home the front page, and sets the privacy page.', 'tuckermay' ); ?></p>
 
 	<?php if ( is_array( $report ) ) : ?>
 		<div class="notice notice-success inline"><p><strong><?php esc_html_e( 'Done.', 'tuckermay' ); ?></strong></p><ul style="list-style:disc;padding-left:20px">

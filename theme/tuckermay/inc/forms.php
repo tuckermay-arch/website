@@ -18,7 +18,7 @@ function tuckermay_topics() {
 	return array(
 		__( 'Books', 'tuckermay' ),
 		__( 'Writing Lessons Everywhere', 'tuckermay' ),
-		__( 'Comedy one-sheets', 'tuckermay' ),
+		__( 'Comedy ghostwriting', 'tuckermay' ),
 		__( 'YouTube scripts', 'tuckermay' ),
 		__( 'Screenplays or TV scripts', 'tuckermay' ),
 		__( 'Other', 'tuckermay' ),

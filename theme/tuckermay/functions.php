@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'TUCKERMAY_VERSION', '1.0.0' );
+define( 'TUCKERMAY_VERSION', '1.1.0' );
 
 require_once get_theme_file_path( 'inc/settings.php' );
 require_once get_theme_file_path( 'inc/shortcodes.php' );
@@ -57,3 +57,31 @@ function tuckermay_render_year( $content ) {
 	return false !== strpos( $content, '[tm_year]' ) ? str_replace( '[tm_year]', esc_html( wp_date( 'Y' ) ), $content ) : $content;
 }
 add_filter( 'render_block_core/paragraph', 'tuckermay_render_year' );
+
+/**
+ * The comedy page moved from /comedy-one-sheets/ to /comedy-ghostwriting/. Send old links to the new address.
+ */
+function tuckermay_legacy_redirects() {
+	if ( ! is_404() ) {
+		return;
+	}
+	$path = trim( (string) wp_parse_url( isset( $_SERVER['REQUEST_URI'] ) ? wp_unslash( $_SERVER['REQUEST_URI'] ) : '', PHP_URL_PATH ), '/' ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
+	if ( 'comedy-one-sheets' === $path ) {
+		wp_safe_redirect( home_url( '/comedy-ghostwriting/' ), 301 );
+		exit;
+	}
+}
+add_action( 'template_redirect', 'tuckermay_legacy_redirects' );
+
+/**
+ * Keep the post-purchase thank-you page out of search results.
+ */
+function tuckermay_noindex_thank_you( $robots ) {
+	if ( is_page( 'thank-you' ) ) {
+		$robots['noindex']  = true;
+		$robots['nofollow'] = true;
+	}
+	return $robots;
+}
+add_filter( 'wp_robots', 'tuckermay_noindex_thank_you' );
+

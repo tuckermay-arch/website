@@ -67,7 +67,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"tm-jump tm-jump--slate"} -->
-<p class="tm-jump tm-jump--slate"><a href="<?php echo esc_url( home_url( '/comedy-one-sheets/' ) ); ?>"><strong>Comedy One-Sheets</strong> Jokes for movie and TV podcasts</a></p>
+<p class="tm-jump tm-jump--slate"><a href="<?php echo esc_url( home_url( '/comedy-ghostwriting/' ) ); ?>"><strong>Comedy Ghostwriting</strong> Jokes for podcasts and YouTube channels</a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>

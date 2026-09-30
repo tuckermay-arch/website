@@ -1,16 +1,3 @@
-<?php
-/**
- * Title: Comedy Ghostwriting page
- * Slug: tuckermay/page-comedy
- * Categories: tuckermay-pages
- * Description: Packages (single sheet and retainers), credentials, rotating sample jokes, sample sheets, FAQ, and contact form.
- * Block Types: core/post-content
- * Post Types: page
- * Viewport width: 1400
- *
- * @package tuckermay
- */
-?>
 <!-- wp:group {"className":"tm-page"} -->
 <div class="wp-block-group tm-page"><!-- wp:group {"className":"tm-hero"} -->
 <div class="wp-block-group tm-hero"><!-- wp:paragraph {"className":"tm-eyebrow"} -->
@@ -413,23 +400,23 @@
 
 <!-- wp:group {"className":"tm-sheets"} -->
 <div class="wp-block-group tm-sheets"><!-- wp:image {"lightbox":{"enabled":true},"sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/sample-the-white-lotus.jpg' ) ); ?>" alt="Comedy one-sheet for The White Lotus"/><figcaption class="wp-element-caption">The White Lotus</figcaption></figure>
+<figure class="wp-block-image size-full"><img src="https://tuckermay.com/wp-content/themes/tuckermay/assets/images/sample-the-white-lotus.jpg" alt="Comedy one-sheet for The White Lotus"/><figcaption class="wp-element-caption">The White Lotus</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"lightbox":{"enabled":true},"sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/sample-severance.jpg' ) ); ?>" alt="Comedy one-sheet for Severance"/><figcaption class="wp-element-caption">Severance</figcaption></figure>
+<figure class="wp-block-image size-full"><img src="https://tuckermay.com/wp-content/themes/tuckermay/assets/images/sample-severance.jpg" alt="Comedy one-sheet for Severance"/><figcaption class="wp-element-caption">Severance</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"lightbox":{"enabled":true},"sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/sample-project-hail-mary.jpg' ) ); ?>" alt="Comedy one-sheet for Project Hail Mary"/><figcaption class="wp-element-caption">Project Hail Mary</figcaption></figure>
+<figure class="wp-block-image size-full"><img src="https://tuckermay.com/wp-content/themes/tuckermay/assets/images/sample-project-hail-mary.jpg" alt="Comedy one-sheet for Project Hail Mary"/><figcaption class="wp-element-caption">Project Hail Mary</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"lightbox":{"enabled":true},"sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/sample-the-devil-wears-prada-2.jpg' ) ); ?>" alt="Comedy one-sheet for The Devil Wears Prada 2"/><figcaption class="wp-element-caption">The Devil Wears Prada 2</figcaption></figure>
+<figure class="wp-block-image size-full"><img src="https://tuckermay.com/wp-content/themes/tuckermay/assets/images/sample-the-devil-wears-prada-2.jpg" alt="Comedy one-sheet for The Devil Wears Prada 2"/><figcaption class="wp-element-caption">The Devil Wears Prada 2</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"lightbox":{"enabled":true},"sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/sample-weapons.jpg' ) ); ?>" alt="Comedy one-sheet for Weapons"/><figcaption class="wp-element-caption">Weapons</figcaption></figure>
+<figure class="wp-block-image size-full"><img src="https://tuckermay.com/wp-content/themes/tuckermay/assets/images/sample-weapons.jpg" alt="Comedy one-sheet for Weapons"/><figcaption class="wp-element-caption">Weapons</figcaption></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->

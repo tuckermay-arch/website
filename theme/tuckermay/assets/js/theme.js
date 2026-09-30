@@ -157,4 +157,49 @@
 			}
 		} );
 	} );
+	/* Comedy page: rotate sample jokes, three at a time. */
+	document.querySelectorAll( '.tm-rotator' ).forEach( function ( box ) {
+		var items = Array.prototype.slice.call( box.querySelectorAll( ':scope > .tm-joke' ) );
+		var per = 3;
+		if ( items.length <= per ) {
+			return;
+		}
+		var start = 0;
+		var timer = null;
+		var still = window.matchMedia && window.matchMedia( '(prefers-reduced-motion: reduce)' ).matches;
+		function render() {
+			items.forEach( function ( el, i ) {
+				el.hidden = ( ( i - start + items.length ) % items.length ) >= per;
+			} );
+		}
+		function next() {
+			box.classList.add( 'is-fading' );
+			setTimeout( function () {
+				start = ( start + per ) % items.length;
+				render();
+				box.classList.remove( 'is-fading' );
+			}, still ? 0 : 350 );
+		}
+		function play() {
+			if ( ! still ) {
+				clearInterval( timer );
+				timer = setInterval( next, 7000 );
+			}
+		}
+		box.classList.add( 'is-ready' );
+		render();
+		play();
+		box.addEventListener( 'mouseenter', function () {
+			clearInterval( timer );
+		} );
+		box.addEventListener( 'mouseleave', play );
+		var more = box.parentElement.querySelector( '.tm-rot-next a' );
+		if ( more ) {
+			more.addEventListener( 'click', function ( e ) {
+				e.preventDefault();
+				next();
+				play();
+			} );
+		}
+	} );
 }() );

@@ -34,12 +34,13 @@
 <!-- wp:navigation {"overlayMenu":"mobile","className":"tm-nav","layout":{"type":"flex","flexWrap":"wrap"}} -->
 <!-- wp:navigation-link {"label":"Books","url":"<?php echo esc_url( home_url( '/novels/' ) ); ?>","kind":"custom"} /-->
 <!-- wp:navigation-link {"label":"Writing Lessons Everywhere","url":"<?php echo esc_url( home_url( '/writing-lessons-everywhere/' ) ); ?>","kind":"custom"} /-->
-<!-- wp:navigation-link {"label":"Comedy One-Sheets","url":"<?php echo esc_url( home_url( '/comedy-one-sheets/' ) ); ?>","kind":"custom"} /-->
+<!-- wp:navigation-link {"label":"Comedy Ghostwriting","url":"<?php echo esc_url( home_url( '/comedy-ghostwriting/' ) ); ?>","kind":"custom"} /-->
 <!-- wp:navigation-link {"label":"YouTube Scripts","url":"<?php echo esc_url( home_url( '/youtube-scripts/' ) ); ?>","kind":"custom"} /-->
 <!-- wp:navigation-submenu {"label":"Other Writing","url":"<?php echo esc_url( home_url( '/portfolio/' ) ); ?>","kind":"custom"} -->
 <!-- wp:navigation-link {"label":"Screenplays","url":"<?php echo esc_url( home_url( '/screenplays/' ) ); ?>","kind":"custom"} /-->
 <!-- wp:navigation-link {"label":"TV Shows","url":"<?php echo esc_url( home_url( '/tv-shows/' ) ); ?>","kind":"custom"} /-->
 <!-- wp:navigation-link {"label":"Poetry / Short Stories","url":"<?php echo esc_url( home_url( '/poetry-prose/' ) ); ?>","kind":"custom"} /-->
+<!-- wp:navigation-link {"label":"Sketch Comedy","url":"<?php echo esc_url( home_url( '/sketch-comedy/' ) ); ?>","kind":"custom"} /-->
 <!-- /wp:navigation-submenu -->
 <!-- wp:navigation-link {"label":"Blog","url":"<?php echo esc_url( home_url( '/blog/' ) ); ?>","kind":"custom"} /-->
 <!-- wp:navigation-link {"label":"About","url":"<?php echo esc_url( home_url( '/about/' ) ); ?>","kind":"custom"} /-->

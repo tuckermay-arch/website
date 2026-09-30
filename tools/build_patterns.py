@@ -70,8 +70,9 @@ def h(level, html, cls=None, anchor=None):
             f'<!-- /wp:heading -->')
 
 
-def img(src, alt, cls=None, href=None, blank=False, caption=None):
-    a = {'sizeSlug': 'full', 'linkDestination': 'custom' if href else 'none', 'className': cls}
+def img(src, alt, cls=None, href=None, blank=False, caption=None, lightbox=False):
+    a = {'lightbox': {'enabled': True}} if lightbox else {}
+    a.update({'sizeSlug': 'full', 'linkDestination': 'custom' if href else 'none', 'className': cls})
     tag = f'<img src="{src}" alt="{escape(alt, quote=True)}"/>'
     if href:
         tgt = ' target="_blank" rel="noreferrer noopener"' if blank else ''
@@ -148,6 +149,9 @@ def page(slug, title, body, desc):
 AMZ_DOB = 'https://a.co/d/0a47KAUl'
 AMZ_LHM = 'https://a.co/d/05ZV8bDo'
 PAYPAL = 'https://www.paypal.com/ncp/payment/ZWBQS9N9BLE6G'
+PAYPAL_BIWEEKLY = 'https://www.paypal.com/ncp/payment/JTAVSWRCAD25U'
+PAYPAL_MONTHLY = 'https://www.paypal.com/ncp/payment/VZH39TD9YFLHA'
+COMEDY = '/comedy-ghostwriting/'
 TOOLKIT = 'https://writinglessonseverywhere.netlify.app/'
 TS4 = 'https://tuckermaymysteries.substack.com/p/toy-story-4-writing-lesson'
 IG = 'https://www.instagram.com/tuckermaymysteries/'
@@ -170,11 +174,19 @@ def formats(items):
 
 def offer_dark():
     return group([
+        p('Risk-free trial', 'tm-trial-badge'),
         group([h(3, 'Custom one-sheet'), p('$250', 'tm-price')], 'tm-offer-head'),
-        lst(['10 late-night-style one- and two-liner jokes', '5 intros, transitions, and ad throws',
-             'Delivered within 5 days', 'You own all rights. Credit optional.'], 'tm-checks'),
+        lst(['10 punch-up jokes', '5 customized intros, transitions, or ad throws', 'Delivered within 5 days',
+             'First order? Money back if you don’t use a single joke'], 'tm-checks'),
         buttons(button('Buy now', PAYPAL, blank=True, cls='tm-btn-light')),
     ], 'tm-offer tm-offer--dark')
+
+
+def package(name, price, per, items, href, badge=None, cls=''):
+    parts = [p(badge, 'tm-pk-badge')] if badge else []
+    parts += [h(3, name), p(price, 'tm-pk-price'), p(per, 'tm-pk-per'), lst(items, 'tm-checks'),
+              buttons(button('Buy now', href, blank=True))]
+    return group(parts, ('tm-pk ' + cls).strip())
 
 
 def review():
@@ -219,13 +231,13 @@ def header():
                p('Novels · Comedy Writing · A Community for Writers', 'tm-sub')], 'tm-id'),
     ], 'tm-brand', layout={'type': 'flex', 'flexWrap': 'nowrap'})
     links = [('Books', '/novels/'), ('Writing Lessons Everywhere', '/writing-lessons-everywhere/'),
-             ('Comedy One-Sheets', '/comedy-one-sheets/'), ('YouTube Scripts', '/youtube-scripts/')]
+             ('Comedy Ghostwriting', COMEDY), ('YouTube Scripts', '/youtube-scripts/')]
     nav = ['<!-- wp:navigation {"overlayMenu":"mobile","className":"tm-nav","layout":{"type":"flex","flexWrap":"wrap"}} -->']
     for label, path in links:
         nav.append(f'<!-- wp:navigation-link {{"label":"{label}","url":"{URL(path)}","kind":"custom"}} /-->')
     nav.append(f'<!-- wp:navigation-submenu {{"label":"Other Writing","url":"{URL("/portfolio/")}","kind":"custom"}} -->')
     for label, path in [('Screenplays', '/screenplays/'), ('TV Shows', '/tv-shows/'),
-                        ('Poetry / Short Stories', '/poetry-prose/')]:
+                        ('Poetry / Short Stories', '/poetry-prose/'), ('Sketch Comedy', '/sketch-comedy/')]:
         nav.append(f'<!-- wp:navigation-link {{"label":"{label}","url":"{URL(path)}","kind":"custom"}} /-->')
     nav.append('<!-- /wp:navigation-submenu -->')
     for label, path in [('Blog', '/blog/'), ('About', '/about/'), ('Contact', '/contact/')]:
@@ -281,7 +293,7 @@ def home():
     wle = column([
         group([
             p('Weekly newsletter on Substack', 'tm-kicker'),
-            img(IMG('wle-wordmark.jpg'), 'Writing Lessons Everywhere: Source, Mechanism, Tool', 'tm-wle-wordmark'),
+            img(IMG('wle-wordmark.jpg'), 'Writing Lessons Everywhere: Source, Mechanism, Tool', 'tm-wle-wordmark', href=URL('/writing-lessons-everywhere/')),
             p('Writing lessons from the pop culture in the headlines.', 'tm-tag'),
         ], 'tm-card-head tm-wle-head'),
         group([
@@ -300,22 +312,22 @@ def home():
 
     comedy = column([
         group([
-            p('For movie and TV podcasts', 'tm-kicker'),
-            h(2, 'Comedy One-Sheets'),
-            p('Custom jokes written for the show your next episode covers.', 'tm-tag'),
+            p('For podcasts and YouTube channels', 'tm-kicker'),
+            h(2, f'<a href="{URL(COMEDY)}">Comedy Ghostwriting</a>', 'tm-head-link'),
+            p('Custom jokes and ad throws for your next episode or video.', 'tm-tag'),
         ], 'tm-card-head'),
         group([
             p('Alum of Northwestern’s Mee-Ow sketch show. Has written for comedy teams at The Second City, iO, and iO West.',
               'tm-creds'),
             offer_dark(),
-            p('Tell me which movie or TV show your episode covers at checkout. Jokes on other topics work too.', 'tm-note'),
+            p(f'<a href="{URL(COMEDY)}#packages">Retainers from $450/month with 3-day delivery →</a>', 'tm-retainer-line'),
         ], 'tm-card-body'),
-        p(f'<a href="{URL("/comedy-one-sheets/")}">Examples and FAQ</a>', 'tm-card-foot'),
+        p(f'<a href="{URL(COMEDY)}">Packages, samples, and FAQ</a>', 'tm-card-foot'),
     ], 'tm-card tm-card--comedy')
 
     write('page-home', 'Home page', group([columns([books, wle, comedy], 'tm-cards')], 'tm-home'),
           cats='tuckermay-pages', block_types='core/post-content', post_types='page',
-          desc='Three cards: Books, Writing Lessons Everywhere, Comedy One-Sheets.')
+          desc='Three cards: Books, Writing Lessons Everywhere, Comedy Ghostwriting.')
 
 
 # ---------------------------------------------------------------- novels
@@ -435,13 +447,30 @@ def wle():
 
 
 # ---------------------------------------------------------------- comedy
+JOKES = [
+    ('In this movie, a man risks everything to save a rock. In Kevin Hart movies, a man risks everything to save The Rock.', 'Project Hail Mary'),
+    ('The severance procedure is messed up. The only time you shouldn’t remember what happened at work is the day after the office Christmas party.', 'Severance'),
+    ('The salaries for the movie’s stars leaked online. The original was based on a book. The sequel is based on a checkbook.', 'The Devil Wears Prada 2'),
+    ('The show is called The White Lotus and the creator is Mike White. I guess he felt “The Mike Lotus” was too on-the-nose.', 'The White Lotus'),
+    ('Jordan Peele’s production company lost a bidding war for Weapons. He said, “Us?” and they said, “Nope. Get Out.”', 'Weapons'),
+    ('Adam Scott’s character defends his work at Lumon as “mysterious and important,” which is the exact phrase I use to describe my cat.', 'Severance'),
+    ('I thought Gosling made a pretty convincing astronaut. Others say his performance lacks gravity.', 'Project Hail Mary'),
+    ('Season four is reportedly set in France. It’s titled, The White Lotus: Oops! All Mimes.', 'The White Lotus'),
+    ('The sequel’s romantic subplot is so undercooked it might give you salmonella.', 'The Devil Wears Prada 2'),
+    ('Director Zach Cregger had a history in sketch comedy before turning to horror films. What a pivot: from doing sketch to being sketch.', 'Weapons'),
+    ('Rocky survives a lot in this movie. He beats scissors but ultimately succumbs to paper.', 'Project Hail Mary'),
+    ('Some fans are upset it took 20 years for a sequel. At this rate, the third’ll be called “The Devil Is Buried in Prada.”', 'The Devil Wears Prada 2'),
+    ('The characters in the show are working on a way to undo severance, effectively reversing a surgical procedure. I’m way ahead of them. I put my appendix back in years ago.', 'Severance'),
+    ('The script for Weapons sold for $38 million, which is only slightly more than I paid for the ticket to see it.', 'Weapons'),
+    ('Mike White made the show as a COVID project and got a global hit. My COVID project was a sourdough starter that triggered my carbon monoxide detector.', 'The White Lotus'),
+]
+
+
 def comedy():
-    hero = group([
-        group([p('For movie and TV podcasts', 'tm-eyebrow'), h(1, 'Comedy One-Sheets'),
-               p('I write killer jokes for film and TV podcasts looking to increase listener engagement through humor. Tell me what your episode covers, and you’ll get a page of custom jokes to pepper into your script in the way that’s most organic to your show.', 'tm-lede')],
-              'tm-hero'),
-        offer_dark(),
-    ], 'tm-split')
+    hero = group([p('For podcasts and YouTube channels', 'tm-eyebrow'), h(1, 'Comedy Ghostwriting'),
+                  p('I write killer jokes for podcasts and YouTube channels looking to increase engagement through humor. Tell me what your episode or video covers, and you’ll get a page of custom jokes and ad throws to pepper into your script in the way that’s most organic to your show.', 'tm-lede'),
+                  buttons(button('See packages', '#packages', cls='tm-btn-slate'), button('See samples', '#samples', outline=True))],
+                 'tm-hero')
 
     hire = group([
         p('Why hire me', 'tm-eyebrow'), h(2, 'Trained on the same stages as late night’s best'),
@@ -452,44 +481,84 @@ def comedy():
         ], 'tm-hire-grid'),
     ], 'tm-hire')
 
-    jokes = group([
-        section_head('A taste', 'Lines from real one-sheets'),
+    packages = group([
+        section_head('Packages', 'Try one, or keep the jokes coming',
+                     'Every one-sheet: 10 punch-up jokes and 5 intros, transitions, or ad throws, written for your episode or video.'),
         group([
-            group([p('Adam Scott’s character defends his work at Lumon as “mysterious and important,” which is the exact phrase I use to describe my cat.', 'tm-joke-text'), p('Severance', 'tm-joke-src')], 'tm-joke'),
-            group([p('The salaries for the movie’s stars leaked online. The original was based on a book. The sequel is based on a checkbook.', 'tm-joke-text'), p('The Devil Wears Prada 2', 'tm-joke-src')], 'tm-joke'),
-            group([p('I thought Gosling made a pretty convincing astronaut. Others say his performance lacks gravity.', 'tm-joke-text'), p('Project Hail Mary', 'tm-joke-src')], 'tm-joke'),
-        ], 'tm-jokes'),
+            package('Single one-sheet', '$250', 'one-time',
+                    ['10 punch-up jokes', '5 customized intros, transitions, or ad throws', 'Delivered within 5 days',
+                     'First order? Money back if you don’t use a single joke'], PAYPAL, 'Risk-free trial', 'tm-pk--trial'),
+            package('Bi-Weekly Retainer', '$450', 'per month · $225 per sheet',
+                    ['2 one-sheets per month', 'Topics of your choice', '3-day speedy delivery', 'Cancel anytime'], PAYPAL_BIWEEKLY),
+            package('Monthly Retainer', '$850', 'per month · $212.50 per sheet',
+                    ['4 one-sheets per month', 'Topics of your choice', '3-day speedy delivery', 'Lowest price per sheet', 'Cancel anytime'],
+                    PAYPAL_MONTHLY, 'Best deal', 'tm-pk--best'),
+        ], 'tm-pks'),
+    ], anchor='packages')
+
+    jokes = group([
+        section_head('A taste', 'Lines from real one-sheets', 'A few favorites from the sample sheets. They change every few seconds.'),
+        group([group([p(j, 'tm-joke-text'), p(src, 'tm-joke-src')], 'tm-joke') for j, src in JOKES], 'tm-jokes tm-rotator'),
+        buttons(button('Show me more →', '#', outline=True, cls='tm-rot-next')),
     ])
 
     sheets = [('the-white-lotus', 'The White Lotus'), ('severance', 'Severance'), ('project-hail-mary', 'Project Hail Mary'),
               ('the-devil-wears-prada-2', 'The Devil Wears Prada 2'), ('weapons', 'Weapons')]
-    examples = group([
-        section_head('Examples', 'See full one-sheets', 'Click any sheet to open the PDF.'),
-        group([img(IMG(f'one-sheet-{k}.jpg'), f'Comedy one-sheet for {t}', href=PDF(f'comedy-one-sheet-{k}.pdf'), blank=True, caption=t)
-               for k, t in sheets], 'tm-sheets'),
-    ])
+    samples = group([
+        section_head('Samples', 'See full one-sheets', 'Click any sheet to see it full size.'),
+        group([img(IMG(f'sample-{k}.jpg'), f'Comedy one-sheet for {t}', caption=t, lightbox=True) for k, t in sheets], 'tm-sheets'),
+    ], anchor='samples')
 
-    humor = panel([p('Why humor matters', 'tm-eyebrow'), h(2, 'Funny keeps people listening'),
-                   p('A laugh early in an episode gives listeners a reason to stay, and a reason to come back next week. Your show already has the opinions and the expertise. A one-sheet adds the punchlines.', 'tm-lede')],
+    humor = panel([p('Why humor matters', 'tm-eyebrow'), h(2, 'Funny keeps people watching and listening'),
+                   p('A laugh early in an episode or video gives your audience a reason to stay, and a reason to come back next week. Your show already has the opinions and the expertise. A one-sheet adds the punchlines.', 'tm-lede')],
                   'tm-narrow')
 
     steps = group([section_head('How it works', 'Three steps'),
-                   lst(['Buy your one-sheet through PayPal.',
-                        'At checkout, tell me which movie or TV show your episode covers, or any other topic you want jokes about.',
-                        'Get your one-sheet within 5 days.'], 'tm-steps', ordered=True)])
+                   lst(['Choose a package and check out through PayPal.',
+                        'At checkout, tell me what your episode or video covers, or any other topic you want jokes about. Retainer clients list each month’s topics when they pay that month’s invoice.',
+                        'Get your one-sheet: within 5 days for a single sheet, within 3 days on a retainer.'], 'tm-steps', ordered=True)])
 
     faq = group([section_head('FAQ', 'Questions'), group([
-        details('How long will it take?', 'You’ll receive your one-sheet within 5 days of placing your order.'),
-        details('What kind of jokes will it be?', 'Each one-sheet has 10 one- or two-liner jokes, the kind you might hear in a late-night show monologue. Each sheet also has 5 introductions, transitions, or ad throws that use humor to keep listeners hooked.'),
+        details('How long will it take?', 'Single one-sheets arrive within 5 days of your order. Retainer sheets arrive within 3 days.'),
+        details('What kind of jokes will it be?', 'Each one-sheet has 10 one- or two-liner jokes, the kind you might hear in a late-night show monologue, plus 5 introductions, transitions, or ad throws customized for your show. It works the same way for podcast episodes and YouTube videos.'),
         details('Would you be willing to write jokes about topics other than TV shows and movies?', 'Yes, absolutely. You can include the subject you’d like jokes about when placing your order.'),
-        details('What about refunds?', 'No refunds will be offered under any circumstances. Please view the example one-sheets above to get a good idea of what you’ll be receiving.'),
+        details('What about refunds?', 'Your first one-sheet is a risk-free trial: if you don’t use any of the jokes in your episode or video, you get your money back. After your first order, one-sheets aren’t refundable. Retainers can be canceled anytime, but payments already made aren’t refunded.'),
         details('Do I need to credit you?', 'You will own and retain all rights to the jokes. You are not required to credit me as a writer, but if you would like to do so it is highly appreciated.'),
     ], 'tm-faqs')])
 
-    contact = panel([p('Questions?', 'tm-eyebrow'), h(2, 'Contact Tucker'), sc('[tm_contact_form topic="Comedy one-sheets"]')])
+    contact = panel([p('Questions?', 'tm-eyebrow'), h(2, 'Contact Tucker'), sc('[tm_contact_form topic="Comedy ghostwriting"]')])
 
-    page('page-comedy', 'Comedy One-Sheets page', [hero, hire, jokes, examples, humor, steps, faq, contact],
-         'The $250 one-sheet offer, credentials, sample jokes, example PDFs, FAQ, and contact form.')
+    page('page-comedy', 'Comedy Ghostwriting page', [hero, hire, packages, jokes, samples, humor, steps, faq, contact],
+         'Packages (single sheet and retainers), credentials, rotating sample jokes, sample sheets, FAQ, and contact form.')
+
+
+def thank_you():
+    def card(name, steps_, badge=None):
+        parts = [p(badge, 'tm-pk-badge')] if badge else []
+        parts += [h(3, name), lst(steps_, 'tm-steps', ordered=True)]
+        return group(parts, 'tm-ty-card')
+    page('page-thank-you', 'Thank-you page', [
+        group([p('Order received', 'tm-eyebrow'), h(1, 'Thank you!'),
+               p('Your payment went through and your order is in. PayPal is emailing your receipt now. Here’s what happens next for the package you chose.', 'tm-lede')], 'tm-hero'),
+        group([
+            card('Single one-sheet', ['I start writing from the topic you gave at checkout.',
+                                      'Your one-sheet arrives at your PayPal email within 5 days.',
+                                      'First order? It’s risk-free: if you don’t use any of the jokes in your episode or video, email me for a full refund.'], 'Risk-free trial'),
+            card('Bi-Weekly Retainer', ['This month’s sheets are based on the topics you listed at checkout. The first one arrives within 3 days.',
+                                        'Each month you’ll receive a new PayPal invoice. List that month’s topics when you pay it.',
+                                        'Two sheets per month, each delivered within 3 days. Cancel anytime.']),
+            card('Monthly Retainer', ['This month’s sheets are based on the topics you listed at checkout. The first one arrives within 3 days.',
+                                      'Each month you’ll receive a new PayPal invoice. List that month’s topics when you pay it.',
+                                      'Four sheets per month, each delivered within 3 days. Cancel anytime.'], 'Best deal'),
+        ], 'tm-ty-grid'),
+        panel([h(2, 'Questions about your order?'),
+               p('Email <a href="mailto:tucker@tuckermaybooks.com">tucker@tuckermaybooks.com</a> and I’ll get back to you.', 'tm-lede')]),
+        group([
+            group([p('While you wait', 'tm-eyebrow'), h(2, 'Writing Lessons Everywhere'),
+                   p('My free weekly newsletter: practical writing lessons from the pop culture in the headlines.')]),
+            buttons(button('Subscribe free', SUBSTACK_SUBSCRIBE, blank=True, cls='tm-btn-blue')),
+        ], 'tm-cross'),
+    ], 'Shown after PayPal checkout: what happens next for each package, contact email, and newsletter signup.')
 
 
 # ---------------------------------------------------------------- youtube
@@ -575,7 +644,7 @@ def about():
         group([section_head('Where to next', 'Find your way in'), group([
             p(f'<a href="{URL("/novels/")}"><strong>The Novels</strong> Mysteries by Tucker May</a>', 'tm-jump tm-jump--pine'),
             p(f'<a href="{URL("/writing-lessons-everywhere/")}"><strong>Writing Lessons Everywhere</strong> A weekly newsletter for writers</a>', 'tm-jump tm-jump--navy'),
-            p(f'<a href="{URL("/comedy-one-sheets/")}"><strong>Comedy One-Sheets</strong> Jokes for movie and TV podcasts</a>', 'tm-jump tm-jump--slate'),
+            p(f'<a href="{URL(COMEDY)}"><strong>Comedy Ghostwriting</strong> Jokes for podcasts and YouTube channels</a>', 'tm-jump tm-jump--slate'),
         ], 'tm-jumps')]),
     ], 'Bio with photo and links to the three main sections.')
 
@@ -604,7 +673,7 @@ def portfolio():
              ('ink', '/poetry-prose/', 'Poetry / Short Stories', 'Short fiction and poems to read'),
              ('ink', '/sketch-comedy/', 'Sketch Comedy Sample Packet', 'A sample packet of sketch comedy writing'),
              ('slate', '/youtube-scripts/', 'YouTube script samples', 'Explainers, commentary, and video listicles'),
-             ('slate', '/comedy-one-sheets/', 'Comedy one-sheets', 'Example joke sheets for movie and TV podcasts'),
+             ('slate', COMEDY, 'Comedy ghostwriting', 'Sample joke sheets for podcasts and YouTube channels'),
              ('navy', '/writing-lessons-everywhere/', 'Writing Lessons Everywhere', 'Weekly writing lessons on Substack')]
     page('page-portfolio', 'Portfolio page', [
         group([p('Portfolio', 'tm-eyebrow'), h(1, 'Everything I’ve written'),
@@ -657,5 +726,5 @@ if __name__ == '__main__':
         if f.endswith('.php'):
             os.remove(os.path.join(OUT, f))
     header(); footer(); home(); novels(); wle(); comedy(); youtube()
-    screenplays(); tv(); poetry(); about(); blog(); contact(); portfolio(); privacy(); sections()
+    screenplays(); tv(); poetry(); about(); blog(); contact(); portfolio(); privacy(); thank_you(); sections()
     print('\n'.join(sorted(os.listdir(OUT))))

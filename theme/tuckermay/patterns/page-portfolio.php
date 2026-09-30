@@ -52,7 +52,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"tm-port tm-port--slate"} -->
-<p class="tm-port tm-port--slate"><a href="<?php echo esc_url( home_url( '/comedy-one-sheets/' ) ); ?>"><strong>Comedy one-sheets</strong> Example joke sheets for movie and TV podcasts</a></p>
+<p class="tm-port tm-port--slate"><a href="<?php echo esc_url( home_url( '/comedy-ghostwriting/' ) ); ?>"><strong>Comedy ghostwriting</strong> Sample joke sheets for podcasts and YouTube channels</a></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"tm-port tm-port--navy"} -->
