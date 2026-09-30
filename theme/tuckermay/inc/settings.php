@@ -108,7 +108,10 @@ function tuckermay_render_settings() {
 	?>
 	<div class="wrap">
 		<h1><?php esc_html_e( 'Tucker May Settings', 'tuckermay' ); ?></h1>
+		<p><?php /* translators: %s: version */ echo esc_html( sprintf( __( 'Theme version %s', 'tuckermay' ), TUCKERMAY_VERSION ) ); ?></p>
 		<?php settings_errors( 'tuckermay_options' ); ?>
+		<?php tuckermay_render_update_11(); ?>
+		<hr>
 
 		<form method="post" action="options.php">
 			<?php settings_fields( 'tuckermay_options_group' ); ?>

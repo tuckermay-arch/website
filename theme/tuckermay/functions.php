@@ -7,12 +7,13 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'TUCKERMAY_VERSION', '1.1.0' );
+define( 'TUCKERMAY_VERSION', '1.2.0' );
 
 require_once get_theme_file_path( 'inc/settings.php' );
 require_once get_theme_file_path( 'inc/shortcodes.php' );
 require_once get_theme_file_path( 'inc/forms.php' );
 require_once get_theme_file_path( 'inc/setup-pages.php' );
+require_once get_theme_file_path( 'inc/update-11.php' );
 
 /**
  * Theme supports and editor styles.
