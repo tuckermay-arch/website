@@ -43,6 +43,10 @@
 <p class="tm-port tm-port--ink"><a href="<?php echo esc_url( home_url( '/poetry-prose/' ) ); ?>"><strong>Poetry / Short Stories</strong> Short fiction and poems to read</a></p>
 <!-- /wp:paragraph -->
 
+<!-- wp:paragraph {"className":"tm-port tm-port--ink"} -->
+<p class="tm-port tm-port--ink"><a href="<?php echo esc_url( home_url( '/sketch-comedy/' ) ); ?>"><strong>Sketch Comedy Sample Packet</strong> A sample packet of sketch comedy writing</a></p>
+<!-- /wp:paragraph -->
+
 <!-- wp:paragraph {"className":"tm-port tm-port--slate"} -->
 <p class="tm-port tm-port--slate"><a href="<?php echo esc_url( home_url( '/youtube-scripts/' ) ); ?>"><strong>YouTube script samples</strong> Explainers, commentary, and video listicles</a></p>
 <!-- /wp:paragraph -->

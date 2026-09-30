@@ -48,7 +48,7 @@
 - Contact: form adds "What's this about?" dropdown.
 - WLE page "About Tucker" uses the post sign-off line.
 - Adding samples later must be easy (Screenplays, TV Shows, Poetry / Short Stories): each entry is a reusable block pattern ("Screenplay entry", "TV show entry", "Story or poem entry") inserted from the + menu, or duplicated from an existing entry. Screenplays use ONE shared request form at the bottom; each "Request script" button fills in that entry's title automatically, so a new screenplay needs no form setup.
-- /portfolio/ stays as a hub page (not in the menu) linking to every sample section: Novels, Screenplays, TV Shows, Poetry / Short Stories, YouTube samples, Comedy one-sheets, WLE. Keeps old links working.
+- /portfolio/ stays as a hub page (not in the menu) linking to every sample section: Novels, Screenplays, TV Shows, Poetry / Short Stories, Sketch Comedy Sample Packet (/sketch-comedy/), YouTube samples, Comedy ghostwriting, WLE. Keeps old links working.
 - Privacy Policy page, linked in the footer only. Draft in pages-mockup.html; Tucker to review (cookies section depends on analytics choice).
 
 ## Comedy one-sheets (homepage card is one-sheets only, for movie and TV podcasts)

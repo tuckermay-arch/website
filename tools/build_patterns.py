@@ -602,6 +602,7 @@ def portfolio():
              ('ink', '/screenplays/', 'Screenplays', 'Feature scripts, available on request'),
              ('ink', '/tv-shows/', 'TV Shows', 'Original pilots and spec scripts to read'),
              ('ink', '/poetry-prose/', 'Poetry / Short Stories', 'Short fiction and poems to read'),
+             ('ink', '/sketch-comedy/', 'Sketch Comedy Sample Packet', 'A sample packet of sketch comedy writing'),
              ('slate', '/youtube-scripts/', 'YouTube script samples', 'Explainers, commentary, and video listicles'),
              ('slate', '/comedy-one-sheets/', 'Comedy one-sheets', 'Example joke sheets for movie and TV podcasts'),
              ('navy', '/writing-lessons-everywhere/', 'Writing Lessons Everywhere', 'Weekly writing lessons on Substack')]
